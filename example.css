@@ -1,0 +1,48 @@
+#topmenu {
+    width: 100%;
+}
+
+#topmenu ul {
+    width: 500px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#topmenu li {
+    list-style: none;
+    float: left;
+    line-height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#topmenu .menuLink {
+    text-decoration: none;
+    color: #707070;
+    display: block;
+    width: 80px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Helvetica";
+}
+
+#topmenu .menuLink:hover {
+    color: #FC4C00;
+}
+
+#topmenu .topmenuImg {
+    width: 40px;
+    height: 40px;
+    margin : 0px 5px 0px 5px;
+}
+
+#topmenu .topmenuLogo {
+    width: 53px;
+    height: 40px;
+    margin : 0px 5px 0px 5px;
+}
+
+div {
+    text-align: center;
+    margin: 32px 0px 19px 0px;
+}
