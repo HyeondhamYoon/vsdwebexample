@@ -1,0 +1,89 @@
+#topmenu {
+    width: 100%;
+}
+
+#topmenu ul {
+    width: 755px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left: 0px;
+}
+
+#topmenu .ulFixed {
+    position: fixed;
+    margin-top: -145px;
+    left: 50%;
+    margin-left: -377.5px;
+}
+
+#topmenu li {
+    list-style: none;
+    float: left;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#topmenu .menuLink {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    width: 60px;
+    height: 24px;
+    font-size: 20px;
+    font-family: "AppleSDGothicNeo";
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    margin : 0px 17.1875px 0px 17.1875px;
+    text-align: center;
+}
+
+#topmenu .menuLink:hover {
+    color: #FC4C00;
+}
+
+#topmenu .introduceTeam {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    width: 60px;
+    height: 24px;
+    font-size: 20px;
+    font-family: "AppleSDGothicNeo";
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    margin : 0px 347.5px 0px 347.5px;
+    text-align: center;
+}
+
+#topmenu .introduceTeam:hover {
+    color: #FC4C00;
+}
+
+
+
+
+#topmenu .topmenuImg {
+    width: 50px;
+    height: 50px;
+    margin : 0px 25px 0px 25px;
+}
+
+#topmenu .topmenuLogo {
+    width: 50px;
+    height: 50px;
+    margin : 0px 352.5px 0px 352.5px;
+}
+
+
+#LOGO {
+    text-align: center;
+    margin: 60.5px 0px 51.5px 0px;
+    padding-left: 5px;
+}
+
+#Modul {
+    width: 755px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left: 0px;
+}
