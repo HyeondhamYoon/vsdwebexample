@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" href="team.css" type="text/css" media="all" />
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="team.css" type="text/css" media="all" />
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
             // 처음 화면에 회, 팀, 작 아이콘 hide
             $(".topmenuImg").hide();
             // 개인적으로 추가해본것 (필요없으면 삭제)
@@ -17,18 +18,18 @@
             $(".menuLink").hide();
 
             // 메인로고 클릭 시 회, 팀, 작 아이콘 fadeIn 4초
-            $("#MainLogo").click(function(){
+            $("#MainLogo").click(function () {
                 $(".topmenuImg").fadeIn('4000');
                 $("#MainLogo").hide();
             });
 
             // 메뉴 이동
-            $("a[href^='#']").click(function(event) {
+            $("a[href^='#']").click(function (event) {
                 event.preventDefault();
                 var target = $(this.hash);
                 var header_height = $('.area_head').height();
                 var offset_top = target.offset().top - header_height;
-                $('html, body').animate({scrollTop: offset_top}, 1000);
+                $('html, body').animate({ scrollTop: offset_top }, 1000);
 
                 // 개인적으로 추가해본것 (필요없으면 삭제)
                 // 메뉴 이동 시 각 팀 이름 hide, '팀 소개' fadeIn 4초
@@ -39,7 +40,7 @@
 
             // 개인적으로 추가해본것 (필요없으면 삭제)
             // '팀 소개' 클릭 시 각 팀 이름 보여짐
-            $(".introduceTeam").click(function() {
+            $(".introduceTeam").click(function () {
                 $(".menuLink").fadeIn('4000');
                 $(".introduceTeam").hide();
             })
@@ -47,63 +48,69 @@
 
             // 개인적으로 추가해본것 (필요없으면 삭제)
             // hover 아이콘 클릭 시 회, 팀, 작 아이콘 hide, 메인로고 faceIn 4초
-            $("#iconHover").click(function(){
+            $("#iconHover").click(function () {
                 $("#MainLogo").fadeIn('4000');
                 $(".topmenuImg").hide();
             });
 
             // 상단바 고정상태
-            var jbOffset = $( 'ul' ).offset();
-            $( window ).scroll( function() {
-                if ( $( document ).scrollTop() > jbOffset.top ) {
-                    $( 'ul' ).addClass( 'ulFixed' );
+            var jbOffset = $('ul').offset();
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > jbOffset.top) {
+                    $('ul').addClass('ulFixed');
                     // 개인적으로 추가해본것 (필요없으면 삭제)
                     // 메뉴 이동 시 각 팀 이름 hide, '팀 소개' fadeIn 4초
                     $(".menuLink").hide();
                     $(".introduceTeam").fadeIn('4000');
-                    
-                    if ($ (".ul").mouseenter()) {
+
+                    if ($(".ul").mouseenter()) {
                         $(".ul").fadeIn('4000');
                     }
                 }
                 else {
-                    $( 'ul' ).removeClass( 'ulFixed' );
+                    $('ul').removeClass('ulFixed');
                 }
             });
 
 
         });
-
-
-
     </script>
-    </head>
-    <body>
- 
+</head>
 
-    <nav id = "topmenu">
-            <div id= "LOGO">
-                <a><img id="MainLogo" class="topmenuLogo" src="./image/logo.png"></a>
-                <div id="Modul">
-                    <a href="index.html"><img class="topmenuImg" src="./image/회.png"></a>
-                    <a href="#"><img id="iconHover" class="topmenuImg" src="./image/팀hover.png"></a>
-                    <a href="work.html"><img class="topmenuImg" src="./image/작.png"></a>
-                </div>
+<body>
+
+
+    <nav id="topmenu">
+        <div id="LOGO">
+            <a><img id="MainLogo" class="topmenuLogo" src="./image/logo.png"></a>
+            <div id="Modul">
+                <a href="edition.html"><img class="topmenuImg" src="./image/회.png"></a>
+                <a href="#"><img id="iconHover" class="topmenuImg" src="./image/팀hover.png"></a>
+                <a href="#"><img id="workBtn" class="topmenuImg" src="./image/작.png"></a>
             </div>
-            <ul>
-                <li class="introduceTeam">팀 소개</li>
-            </ul>
-            <ul>
-                    <li><a class = "menuLink" href="#menu1">기획</a></li>
-                    <li><a class = "menuLink" href="#menu2">그래픽</a></li>
-                    <li><a class = "menuLink" href="#menu3">도록</a></li>
-                    <li><a class = "menuLink" href="#menu4">영상</a></li>
-                    <li><a class = "menuLink" href="#menu5">웹</a></li>
-                    <li><a class = "menuLink" href="#menu6">설치</a></li>
-                    <li><a class = "menuLink" href="#menu7">행사</a></li>
-                    <li><a class = "menuLink" href="#menu8">ㅇㅅㅇ..</a></li>
-            </ul>
+        </div>
+        <ul>
+            <li class="introduceTeam">팀 소개</li>
+        </ul>
+        <ul>
+            <li><a class="menuLink" href="#menu1">기획</a></li>
+            <li><a class="menuLink" href="#menu2">그래픽</a></li>
+            <li><a class="menuLink" href="#menu3">도록</a></li>
+            <li><a class="menuLink" href="#menu4">영상</a></li>
+            <li><a class="menuLink" href="#menu5">웹</a></li>
+            <li><a class="menuLink" href="#menu6">설치</a></li>
+            <li><a class="menuLink" href="#menu7">행사</a></li>
+            <li><a class="menuLink" href="#menu8">ㅇㅅㅇ..</a></li>
+        </ul>
     </nav>
+
+    <script>
+        // 작페이지 비활성화
+        $("#workBtn").click(function () {
+            window.alert('작품 페이지는 7월 15일 오픈예정입니다.');
+            history.go(0);
+        });
+    </script>
 
     <br><br>
     <div id="menu1">기획</div>
@@ -112,6 +119,6 @@
     <div id="menu2">그래픽</div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    </body>
-</html>
+</body>
 
+</html>

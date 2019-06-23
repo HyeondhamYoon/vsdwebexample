@@ -3,89 +3,12 @@
     <head>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="index.css" type="text/css" media="all" />
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
-
-    <script>
-        $(document).ready(function(){
-            // 처음 화면에 회, 팀, 작 아이콘 hide
-            $(".topmenuImg").hide();
-
-            // 메인로고 클릭 시 회, 팀, 작 아이콘 fadeIn 4초
-            $("#MainLogo").click(function(){
-                $(".topmenuImg").fadeIn('4000');
-                $("#MainLogo").hide();
-            });
-
-            // 메뉴 이동
-            $("a[href^='#']").click(function(event) {
-                event.preventDefault();
-                var target = $(this.hash);
-                var header_height = $('.area_head').height();
-                var offset_top = target.offset().top - header_height - 100; //상단바 고정 때문에 -100해줌
-                $('html, body').animate({scrollTop: offset_top}, 1000);
-            });
-
-
-            // 개인적으로 추가해본것 (필요없으면 삭제)
-            // hover 아이콘 클릭 시 회, 팀, 작 아이콘 hide, 메인로고 faceIn 4초
-            $("#iconHover").click(function(){
-                $("#MainLogo").fadeIn('4000');
-                $(".topmenuImg").hide();
-            });
-
-
-            // 상단바 고정상태
-            var jbOffset = $( 'ul' ).offset();
-            $( window ).scroll( function() {
-                if ( $( document ).scrollTop() > jbOffset.top ) {
-                    $( 'ul' ).addClass( 'ulFixed' );
-                }
-                else {
-                    $( 'ul' ).removeClass( 'ulFixed' );
-                }
-            });
-
-
-        });
-
-        window.resizeTo(1920,1280);
-
-
-    </script>
     </head>
     <body>
- 
+        <div class="moving">
+            <img src="./image/index/moving.gif" width="80%" height="80%">
+            <p><a href="edition.html" class="text">ENTER</a></p>
+        </div>
 
-    <nav id = "topmenu">
-            <div id= "LOGO">
-                <a><img id="MainLogo" class="topmenuLogo" src="./image/logo.png"></a>
-                <div id="Modul">
-                    <a href="#"><img id="iconHover" class="topmenuImg" src="./image/회hover.png"></a>
-                    <a href="team.html"><img class="topmenuImg" src="./image/팀.png"></a>
-                    <a href="work.html"><img class="topmenuImg" src="./image/작.png"></a>
-                </div>
-            </div>
-            <ul>
-                <li><a class = "menuLink" href="#menu1">전시 소개</a></li>
-                <li><a class = "menuLink" href="#menu2">포스터</a></li>
-                <li><a class = "menuLink" href="#menu3">교수진</a></li>
-                <li><a class = "menuLink" href="#menu4">오시는 길</a></li>
-                <li><a class = "menuLink" href="#menu5">전시 도면</a></li>
-            </ul>
-    </nav>
-
-    <br><br><br><br>
-    <div id="menu1">전시 소개</div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div id="menu2">포스터포스터포스터포스터포스터</div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </body>
 </html>
-
