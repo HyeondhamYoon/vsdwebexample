@@ -1,0 +1,276 @@
+
+
+#topmenu .TOPMEN {
+    width: 655px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+
+#topmenu li {
+    list-style: none;
+    float: left;
+    margin-left:-7px;
+}
+
+.ulFixed {
+    position: fixed;
+    margin-top: -167px;
+    background-color: #fff;
+    width:100%;
+    padding-top: 41px;
+    padding-bottom: 20px;
+}
+
+#topmenu .menuLink {
+    transition: .3s;
+    background-position: top left;
+    background-image: url(./image/wave.png);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+
+    text-decoration: none;
+    color: #000;
+    display: block;
+    height: 24px;
+    font-size: 20px;
+    font-family: "AppleSDGothicNeo";
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    width:131px;
+    text-align: center;   
+}
+
+#topmenu .menuLink:hover {
+    transition: .6s .1s;
+    background-position: bottom right;
+
+}
+
+#topmenu .menuLink:hover:before {
+    transition: .3s;
+    transform: translateY(-100%) scaleY(0);
+    opacity: 0;
+}
+
+#topmenu .topmenuImg {
+    width: 50px;
+    margin : 0px 25px 0px 25px;
+}
+
+#topmenu .topmenuLogo {
+    height: 50px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#LOGO {
+    text-align: center;
+    margin-top: 60.5px;
+    margin-bottom:  51.5px;
+}
+
+#Modul {
+    width: 755px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.menu {
+    margin-left:74px;
+    margin-right:74px;
+    color: #162989;
+    font-size: 24px;
+    font-family: "AppleSDGothicNeo";
+    font-weight: 900;
+}
+
+#module {
+    width: 442px;
+}
+
+.introedi {
+    color: #000;
+    font-family: "AppleSDGothicNeo";
+    font-weight: 500;
+    float: right;
+    width:944px;
+    margin: 127px auto 0px auto;
+    padding-inline-start:0px;
+}
+
+.introediLI {
+    float:left;
+    display: block;
+}
+
+.introediLI:nth-child(1) {
+    font-size: 20px;
+    margin-right:20px;
+    width:474px;
+    letter-spacing: -0.2417px;
+    line-height: 30px;
+}
+
+.introediLI:nth-child(2) {
+    font-size: 18px;
+    margin-right:0px;
+    width:424px;
+    letter-spacing: -0.24px;
+    line-height: 25px;
+}
+
+.magi {
+    margin-top : 314px;
+}
+
+.magi1 {
+    margin-top : 61px;
+}
+
+.magi2 {
+    margin-top : 10px;
+}
+
+.magi3 {
+    margin-bottom : 61px;
+}
+
+#map_canvas {
+    width:500px;
+    height:500px;
+    margin-right: 10px;
+}
+
+#poster1 {
+    width:500px;
+    margin-right: 10px;
+}
+
+#poster2 {
+    width:500px;
+}
+
+#poster3 {
+    width:1018px;
+    height:500px;
+}
+
+#poster4 {
+    width:500px;
+    height:500px;
+}
+
+#domyun {
+    width:100%;
+}
+
+.intropos {
+    color: #000;
+    font-family: "AppleSDGothicNeo";
+    font-weight: 500;
+    float: right;
+    width:450px;
+    margin: 0px;
+    padding-inline-start:0px;
+}
+
+.introposLI {
+    float:left;
+    display: block;
+    margin-left:0px;
+}
+
+.introposLI:nth-child(1) {
+    font-size: 20px;
+    margin-bottom:30px;
+    width:430px;
+    letter-spacing: -0.2417px;
+    line-height: 30px;
+}
+
+.introposLI:nth-child(2) {
+    font-size: 18px;
+    width:430px;
+    letter-spacing: -0.24px;
+    line-height: 25px;
+}
+
+.prof {
+    list-style:none;
+    text-decoration: none;
+    color: #000;
+    display: block;
+
+    color: #000;
+    font-family: "AppleSDGothicNeo";
+    font-weight: 500;
+    font-size:20px;
+    width:1200px;
+    padding: 50px 0px 50px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline-start:0px;
+}
+
+.profLI {
+    width:300px;
+    float:left;
+    text-align: center;
+}
+
+.prof .profname {
+    font-size:25px;
+    font-family: "AppleSDGothicNeo";
+    font-weight: 900;
+    text-align: center;
+}
+
+
+.intromap {
+    color: #000;
+    font-family: "AppleSDGothicNeo";
+    font-weight: 500;
+    float: right;
+    width:450px;
+    margin: 0px;
+    padding-inline-start:0px;
+}
+
+.intromapLI {
+    float:left;
+    display: block;
+    margin-left:0px;
+}
+
+.intromapLI:nth-child(1) {
+    font-size: 20px;
+    text-align: right;
+    margin-bottom:30px;
+    width:92px;
+    letter-spacing: -0.2417px;
+    line-height: 25px;
+    margin-right: 10px;
+    font-weight: 800;
+}
+
+.intromapLI:nth-child(2) {
+    font-size: 20px;
+    width:340px;
+    letter-spacing: -0.24px;
+    line-height: 25px;
+}
+
+
+
+#MOVE_TOP_BTN {
+    position: fixed;
+    right: 2%;
+    bottom: 50px;
+    display: none;
+    z-index: 999;
+}

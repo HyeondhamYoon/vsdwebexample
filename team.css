@@ -1,12 +1,7 @@
-#topmenu {
-    width: 100%;
-}
-
 #topmenu ul {
     width: 755px;
     margin-left:auto;
     margin-right:auto;
-    padding-left: 0px;
 }
 
 #topmenu .ulFixed {
@@ -24,24 +19,50 @@
 }
 
 #topmenu .menuLink {
+    transition: .3s;
+    background-position: top left;
+    background-image: url(./image/wave.png);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+
     text-decoration: none;
     color: #000;
     display: block;
-    width: 60px;
     height: 24px;
     font-size: 20px;
     font-family: "AppleSDGothicNeo";
     font-weight: 900;
     letter-spacing: -0.5px;
-    margin : 0px 17.1875px 0px 17.1875px;
-    text-align: center;
+    width:131px;
+    text-align: center;   
 }
 
 #topmenu .menuLink:hover {
-    color: #FC4C00;
+    transition: .6s .1s;
+    background-position: bottom right;
+
+}
+
+#topmenu .menuLink:hover:before {
+    transition: .3s;
+    transform: translateY(-100%) scaleY(0);
+    opacity: 0;
 }
 
 #topmenu .introduceTeam {
+
+    transition: .3s;
+    background-position: top left;
+    background-image: url(./image/wave.png);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+
     text-decoration: none;
     color: #000;
     display: block;
@@ -53,11 +74,19 @@
     letter-spacing: -0.5px;
     margin-left:auto;
     margin-right:auto;
-    text-align: center;
+    text-align: center;   
 }
 
 #topmenu .introduceTeam:hover {
-    color: #FC4C00;
+    transition: .6s .1s;
+    background-position: bottom right;
+
+}
+
+#topmenu .introduceTeam:hover:before {
+    transition: .3s;
+    transform: translateY(-100%) scaleY(0);
+    opacity: 0;
 }
 
 

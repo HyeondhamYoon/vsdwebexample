@@ -23,9 +23,25 @@ body {
     font-weight: 900;
     letter-spacing: -0.5px;
     text-align: center;
-    margin-left:-100px;
+    margin-left:212px;
+
+    transition: .3s;
+    background-position: top left;
+    background-image: url(./image/wave.png);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
 }
 
 .moving .text:hover {
-    color: #FC4C00;
+    transition: .6s .1s;
+    background-position: bottom right;
+}
+
+.moving .text:hover:before {
+    transition: .3s;
+    transform: translateY(-100%) scaleY(0);
+    opacity: 0;
 }
