@@ -3,12 +3,16 @@
 
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    
     <link rel="stylesheet" href="edition.css" type="text/css" media="all" />
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=q4r2nngrev"></script>
+
 
     <script>
         $(document).ready(function () {
@@ -45,9 +49,11 @@
                 if ($(document).scrollTop() > jbOffset.top) {
                     if($(document))
                     $('.TOPMEN').addClass('ulFixed');
+                    $('#topmenu li').addClass('liFixed');
                 }
                 else {
                     $('.TOPMEN').removeClass('ulFixed');
+                    $('#topmenu li').removeClass('liFixed');
                 }
             });
 
@@ -101,7 +107,6 @@
         });
     </script>
 
-    <br><br><br><br><br><br><br><br>
     <div class="menu">
         <div id="menu1">전시 소개</div><br>
         <div class="magi1"></div>
@@ -134,82 +139,6 @@
                 University’s visual design.
             </li>
         </ul>
-        <br>
-        <div class="magi"></div>
-
-        <div id="menu2">포스터</div><br>
-        <div class="magi1"></div>
-        <img id="poster1" src="./image/edition/prasol.jpg">
-        <img id="poster2" src="./image/edition/pvc.jpg">
-        <ul class="intropos">
-            <li class="introposLI">
-                [36.8.50.67]은 36회, 8개의 졸준위 팀, 50개의 개인과 팀플, 67개의 작업 수를 의미한다.
-                우리는 남다른 한학기의 졸전의 끝인 ‘여름’이라는 계절을 매력적으로 느껴 여름에
-                맞춰 시원함을 느낄 수 있는 파라솔과 투명한 pvc를 이용해 실크스크린으로 숫자를,
-                우리의 졸전을 여름에 녹인다는 의미를 담아내고자 했다.
-            </li>
-            <li class="introposLI">
-                [36.8.50.67] is 36 times, eight personal team, the 50 individuals and 67
-                shall mean the number of work. We are extraordinary, the end of the end of the semester
-                ‘summer’ feel glamorous, summer can feel cool to the season that an umbrella and transparent pvc.
-                Silk screen means summer in numbers, our team wanted to make sure I found it.
-            </li>
-        </ul>
-        <div class="magi2"></div>
-        <img id="poster3" src="./image/movingposter.png">
-
-        <div class="magi"></div>
-
-        <div id="menu3">교수진</div><br>
-        <div class="magi1"></div>
-        <ul class="prof">
-            <li class="profLI">
-                <div class="profname">한재준</div><br>BX 아이덴티티, 한글디자인
-            </li>
-            <li class="profLI">
-                <div class="profname">민병걸</div><br>출판디자인, 타이포그래피
-            </li>
-            <li class="profLI">
-                <div class="profname">이재원</div><br>인포그래픽, 그래픽디자인
-            </li>
-            <li class="profLI">
-                <div class="profname">유영재</div><br>인터랙티브 영상, 모션디자인,<br>UX/UI
-            </li>
-        </ul>
-        <div class="magi3"><br></div>
-        <div class="magi"></div>
-        <div id="menu4">오시는 길</div><br>
-        <div class="magi1"></div>
-        <img id="poster1" src="./image/edition/map.jpg">
-        <img id="poster4" src="./image/movingposter.png">
-        <ul class="intromap">
-            <li class="intromapLI">
-                학교버스 |<br><br><br>
-                지하철 |<br><br><br><br><br><br><br>
-                시내버스 |<br><br><br><br><br><br><br>
-                주소 |
-            </li>
-            <li class="intromapLI">
-                7호선 태릉입구역, 6호선 화랑대, 석계역에서 셔틀버스 운행
-                <br><br>
-                <span style="color:#FC4C00">1,6호선</span> 석계역 4번 출구에서 시내버스 이용<br>
-                <span style="color:#FC4C00">6,7호선</span> 태릉입구역 7번 출구에서 학교버스 및 시내버스 이용<br>
-                <span style="color:#FC4C00">6호선</span> 화랑대역 3번 출구에서 하차하여 도보 15분 소요
-                <br><br>
-                태릉입구역 및 화랑대역에서 <span style="color:#FC4C00">202번, 1225번, 1155번, 1156번, 82A, 82B번</span> 탑승 후<br>
-                서울여대 육군사관학교 또는 후문에서 하차
-
-                <br><br><br>
-                서울특별시 노원구 화랑로 621<br>
-                서울여자대학교 조형예술관<br>
-                1층 바롬갤러리 / 3층 301호
-            </li>
-
-        </ul>
-        <div class="magi"></div>
-        <div id="menu5">전시 도면</div><br>
-        <div class="magi1"></div>
-        <img id="domyun" src="./image/edition/domyun.png">
     </div>
 
     <a id="MOVE_TOP_BTN"><img src="./image/logomini.png"></a>
