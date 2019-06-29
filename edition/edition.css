@@ -123,7 +123,7 @@
 
    #whitebox1 {
       width:1000px;
-      height:318px;
+      height:267px;
    }
 
   .box {
@@ -131,6 +131,18 @@
      padding-right: 80px;
      padding-bottom:643px;
   }
+
+  .box_1 {
+   padding-left: 80px;
+   padding-right: 80px;
+   padding-bottom:582px;
+}
+
+.box_2 {
+   padding-left: 80px;
+   padding-right: 80px;
+   padding-bottom:300px;
+}
 
   .boxa {
    padding-left: 80px;
