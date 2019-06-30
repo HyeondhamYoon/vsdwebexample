@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html lang="kr">
 
 <head>
    <meta charset="UTF-8">
@@ -8,6 +9,9 @@
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
    <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+   <script type="text/javascript"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=hlvnjlgbp0"></script>
 
    <script>
       $(document).ready(function () {
@@ -25,15 +29,12 @@
             event.preventDefault();
             var target = $(this.hash);
             var header_height = $('.area_head').height();
-            var offset_top = target.offset().top - header_height - 200;
+            var offset_top = target.offset().top - header_height - 150;
             $('html, body').animate({ scrollTop: offset_top }, 1000);
 
          });
 
-         // '팀 소개' 클릭 시 각 팀 이름 보여짐
-         $(".introduceTeam").click(function () {
-            $(".menuLink").show();
-         })
+
 
          // hover 아이콘 클릭 시 회, 팀, 작 아이콘 hide, 메인로고 faceIn 4초
          $("#iconHover").click(function () {
@@ -77,16 +78,16 @@
          <div id="LOGO">
             <a><img id="MainLogo" class="topmenuLogo" src="../image/logo.png"></a>
             <div id="Modul">
-               <a href="#"><img id="iconHover" class="topmenuImg" src="../image/회hover.png"></a>
-               <a href="../team/team.html"><img class="topmenuImg" src="../image/팀.png"></a>
-               <a href="#"><img id="workBtn" class="topmenuImg" src="../image/작.png"></a>
+               <a href="#"><img id="iconHover" class="topmenuImg" src="../image/hhover.png"></a>
+               <a href="../team/team.html"><img class="topmenuImg" src="../image/t.png"></a>
+               <a href="#"><img id="workBtn" class="topmenuImg" src="../image/j.png"></a>
             </div>
          </div>
       </div>
 
       <div class="nav" id="nav">
-         <ul id="showmenu">
-            <li><a class="menuLink" href="#menu1">전시소개</a></li>
+         <ul id="introduceTeam" style="z-index:1;">
+            <li><a class="menuLink" href="#menu1">전시 소개</a></li>
             <li><a class="menuLink" href="#menu2">포스터</a></li>
             <li><a class="menuLink" href="#menu3">교수진</a></li>
             <li><a class="menuLink" href="#menu4">오시는 길</a></li>
@@ -102,74 +103,69 @@
          history.go(0);
       });
    </script>
-
-   <div class="box">
-      <div class="box1" id="menu1">
-         <div id="text1">전시 소개</div>
-         <div class="intr1"><img id="icon1" src="../image/edition/module.png"></div>
-         <div class="intradd">
-            <div class="intr2">
-               36회 졸업전시, 8개의 진행팀, 50개의 참여자와 팀, 67개의 작품
-               <br><br>
-               복잡한 것보다 단순한 것이 더욱 효과적일 때가 있다.
-               <br><br>
-               의미만 거창한 타이틀이 아니라 전시 정보 자체를 타이틀로 사용하여 있는 그대로를 드러냈다.<br>
-               직관적인 타이틀은 복잡한 해석을 요구하지 않으며, 각 참여자의 아이덴티티를 살리는 방법이다.<br>
-               이는 타이틀에 기대지 않고 작품에 더 집중하겠다는 참여자들의 포부이기도 하다.
-               <br><br>
-               이로써 의미만 많고 흔한 전시가 아닌, 2019 서울여대 시각디자인 졸업 전시만의 의미를 갖는다.
-            </div>
-            <div class="intr3">
-               36th graduation exhibition, 8 progression teams, 50 participants and teams, 67 works
-               <br><br>
-               Sometimes being simple is more effective than being complicated.
-               <br><br>
-               It revealed itself as it is, using the wartime information itself as a title, not just a grandiose
-               title.<br>
-               Intuitive titles do not require complex interpretations, and are a way to save the identity of each
-               participant.<br>
-               This is also the aspiration of participants to focus more on their work rather than relying on the
-               title.
-               <br><br>
-               This is not just a meaningful and common exhibition, but a graduation exhibition of 2019 Seoul Women’s
-               University’s visual design.
-            </div>
+   <div class="box1" id="menu1">
+      <div id="text1">전시 소개</div>
+      <img id="icon" src="../image/edition/module.png" style="float:left;">
+      <div class="intradd">
+         <div class="intr2">
+            36회 졸업전시, 8개의 진행팀, 50개의 참여자와 팀, <br>67개의 작품
+            <br><br>
+            복잡한 것보다 단순한 것이 더욱 효과적일 때가 있다.
+            <br><br>
+            의미만 거창한 타이틀이 아니라 전시 정보 자체를 <br>타이틀로 사용하여 있는 그대로를 드러냈다.<br>
+            직관적인 타이틀은 복잡한 해석을 요구하지 않으며, <br>각 참여자의 아이덴티티를 살리는 방법이다.<br>
+            이는 타이틀에 기대지 않고 작품에 더 집중하겠다는 <br>참여자들의 포부이기도 하다.
+            <br><br>
+            이로써 의미만 많고 흔한 전시가 아닌, 2019 서울여대 <br>시각디자인 졸업 전시만의 의미를 갖는다.
+         </div>
+         <div class="intr3">
+            36th graduation exhibition, 8 progression teams, 50 participants and teams, 67 works
+            <br><br>
+            Sometimes being simple is more effective than being complicated.
+            <br><br>
+            It revealed itself as it is, using the wartime information itself as a title, not just a grandiose
+            title.
+            Intuitive titles do not require complex interpretations, and are a way to save the identity of each
+            participant.<br>
+            This is also the aspiration of participants to focus more on their work rather than relying on the
+            title.
+            <br><br>
+            This is not just a meaningful and common exhibition, but a graduation exhibition of 2019 Seoul Women’s
+            University’s visual design.
          </div>
       </div>
    </div>
-   <br>
-   <div id="whitebox"><img id="whitebox1" src="../image/whitebox.png"></div>
-   <br>
-   <div class="box_1">
-      <div class="box1" id="menu2">
-         <div id="text1">포스터</div>
-         <div class="intr1"><img id="icon2" src="../image/edition/prasol.jpg"></div>
-         <div class="intr1"><img id="icon3" src="../image/edition/pvc.jpg"></div>
-         <div class="intradd">
-            <div class="intr4">
-               [36.8.50.67]은 36회, 8개의 졸준위 팀, 50개의 개인과 팀플, 67개의 작업 수를 의미한다.
-               우리는 남다른 한학기의 졸전의 끝인 ‘여름’이라는 계절을 매력적으로 느껴 여름에
-               맞춰 시원함을 느낄 수 있는 파라솔과 투명한 pvc를 이용해 실크스크린으로 숫자를,
-               우리의 졸전을 여름에 녹인다는 의미를 담아내고자 했다.
-            </div>
-            <div class="intr5">
-               [36.8.50.67] is 36 times, eight personal team, the 50 individuals and 67
-               shall mean the number of work. We are extraordinary, the end of the end of the semester
-               ‘summer’ feel glamorous, summer can feel cool to the season that an umbrella and transparent pvc.
-               Silk screen means summer in numbers, our team wanted to make sure I found it.
-            </div>
-
+   </div>
+   <div class="box2" id="menu2">
+      <div id="text1">포스터</div>
+      <img id="iconprasol" src="../image/edition/prasol.jpg" style="float:left;">
+      <img id="iconpvc" src="../image/edition/pvc.jpg" style="float:left;">
+      <div class="intradd">
+         <div class="intr4">
+            [36.8.50.67]은 36회, 8개의 졸준위 팀, 50개의 개인과 팀플, 67개의 작업 수를 의미한다.
+            우리는 남다른 한학기의 졸전의 끝인 ‘여름’이라는 계절을 매력적으로 느껴 여름에
+            맞춰 시원함을 느낄 수 있는 파라솔과 투명한 pvc를 이용해 실크스크린으로 숫자를,
+            우리의 졸전을 여름에 녹인다는 의미를 담아내고자 했다.
+         </div>
+         <div class="intr5">
+            [36.8.50.67] is 36 times, eight personal team, the 50 individuals and 67
+            shall mean the number of work. We are extraordinary, the end of the end of the semester
+            ‘summer’ feel glamorous, summer can feel cool to the season that an umbrella and transparent pvc.
+            Silk screen means summer in numbers, our team wanted to make sure I found it.
          </div>
       </div>
+      <div class="intr10">
+         <iframe src="https://player.vimeo.com/video/344136733?autoplay=1&loop=1&title=0&background=1" frameborder="0"
+            width="1224" height="688.5" allow="autoplay; fullscreen" allowfullscreen onmouseover="this.play()"
+            onmouseout="this.pause()" autobuffer="true" style="float:left;"></iframe>
+      </div>
+
+
+
    </div>
-
-   <br>
-   <div id="whitebox"><img id="whitebox1" src="../image/whitebox.png"></div>
-   <br>
-
-   <div class="box_2">
-      <div class="box1" id="menu3">
-         <div id="text1">교수진</div>
+   <div class="box2a" id="menu3">
+      <div id="text1">교수진</div>
+      <div id="text3">
          <ul class="prof">
             <li class="profLI">
                <div class="profname">한재준</div><br>BX 아이덴티티, 한글디자인
@@ -184,79 +180,60 @@
                <div class="profname">유영재</div><br>인터랙티브 영상, 모션디자인,<br>UX/UI
             </li>
          </ul>
+
       </div>
    </div>
+   <div class="box2b" id="menu4">
+      <div id="text1">오시는 길</div>
+      <div id="icon30" style="width: 600px;
+         height: 600px;
+         position: static !important;
+         float: left;  z-index:100;"></div>
+      <img id="iconmap" src="../image/edition/map.jpg" style="float:left;">
 
-   <br>
-   <div id="whitebox"><img id="whitebox1" src="../image/whitebox.png"></div>
-   <br>
+      <script>
+         var map = new naver.maps.Map('icon30', {
+            center: new naver.maps.LatLng(37.629073, 127.091755),
+            zoom: 13
+         });
 
-   <div class="box_1">
-      <div class="box1" id="menu4">
-         <div id="text1">오시는 길</div>
-         <div class="intr1"><img id="icon2" src="../image/edition/map.jpg"></div>
-         <div class="intr1"><img id="icon3" style="width:600px;height:600px;"></div>
+         var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(37.629073, 127.091755),
+            map: map
+         });
+      </script>
 
-         <script>
-            var position = new naver.maps.LatLng(37.629073, 127.091755);
-            var map = new naver.maps.Map('icon3', {
-               center: position,
-               zoom: 12
-            });
-
-            // marker
-            var markerOptions = {
-               position: position,
-               map: map,
-               icon: {
-                  url: './image/edition/pin.png',
-                  size: new naver.maps.Size(24, 34),
-                  origin: new naver.maps.Point(0, 0),
-                  anchor: new naver.maps.Point(11, 35)
-               }
-            };
-            var marker = new maver.maps.Marker(markerOptions);
-         </script>
-
-         <div class="intradd">
-            <div class="intr6">
-               학교버스 |<br><br><br>
-               지하철 |<br><br><br><br><br><br>
-               시내버스 |<br><br><br><br><br>
-               주소 |
-            </div>
-            <div class="intr7">
-               7호선 태릉입구역, 6호선 화랑대, 석계역에서 셔틀버스 운행
-               <br><br>
-               <span style="color:#FC4C00">1,6호선</span> 석계역 4번 출구에서 시내버스 이용<br>
-               <span style="color:#FC4C00">6,7호선</span> 태릉입구역 7번 출구에서 학교버스 및 시내버스 이용<br>
-               <span style="color:#FC4C00">6호선</span> 화랑대역 3번 출구에서 하차하여 도보 15분 소요
-               <br><br>
-               태릉입구역 및 화랑대역에서 <span style="color:#FC4C00">202번, 1225번, 1155번, 1156번, 82A, 82B번</span> 탑승 후<br>
-               서울여대 육군사관학교 또는 후문에서 하차
-
-               <br><br><br>
-               서울특별시 노원구 화랑로 621<br>
-               서울여자대학교 조형예술관<br>
-               1층 바롬갤러리 / 3층 301호
-            </div>
-
+      <div class="intradd">
+         <div class="intr6">
+            학교버스 |<br><br><br>
+            지하철 |<br><br><br><br><br><br><br>
+            시내버스 |<br><br><br><br><br><br><br><br><br><br><br>
+            주소 |
          </div>
+         <div class="intr7">
+            7호선 태릉입구역, 6호선 화랑대, 석계역에서 셔틀버스 운행
+            <br><br>
+            <span style="color:#FC4C00">1,6호선</span> 석계역 4번 출구에서 <br>시내버스 이용<br>
+            <span style="color:#FC4C00">6,7호선</span> 태릉입구역 7번 출구에서 <br>학교버스 및 시내버스 이용<br>
+            <span style="color:#FC4C00">6호선</span> 화랑대역 3번 출구에서 하차하여 <br>도보 15분 소요
+            <br><br>
+            태릉입구역 및 화랑대역에서 <span style="color:#FC4C00">202번, 1225번, 1155번, 1156번, 82A, 82B번</span> 탑승 후<br>
+            서울여대 육군사관학교 또는 후문에서 하차
+
+            <br><br><br><br><br><br><br><br><br>
+            서울특별시 노원구 화랑로 621<br>
+            서울여자대학교 조형예술관<br>
+            1층 바롬갤러리 / 3층 301호
+         </div>
+
       </div>
+
    </div>
-
-   <br>
-   <div id="whitebox"><img id="whitebox1" src="../image/whitebox.png"></div>
-   <br>
-
-   <div class="boxa">
-      <div class="box1" id="menu5">
-         <div id="text1">전시 도면</div>
-         <div class="intr1"><img id="icon4" src="../image/edition/domyun.png"></div>
-      </div>
+   <div class="box2c" id="menu5">
+      <div id="text1">전시도면</div>
+      <img id="icon4" src="../image/edition/domyun.png">
    </div>
-
-
+  
 
 
    <script src="./script.js"></script>
