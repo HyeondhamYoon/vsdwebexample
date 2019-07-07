@@ -41,7 +41,7 @@
     display: block;
     height: 24px;
     font-size: 20px;
-    font-family: "AppleSDGothicNeo";
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 900;
     letter-spacing: -0.5px;
     text-align: center;   
@@ -75,7 +75,7 @@
     display: block;
     height: 24px;
     font-size: 20px;
-    font-family: "AppleSDGothicNeo";
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 900;
     letter-spacing: -0.5px;
     text-align: center;   
@@ -169,15 +169,21 @@
  }
 
  #iconprasol {
+   width: 600px;
+  height: 600px;
    margin-bottom: 24px;
    margin-right:24px;
 }
 
 #iconpvc {
+   width: 600px;
+  height: 600px;
    margin-bottom: 24px;
 }
 
 #iconmap {
+   width: 600px;
+  height: 600px;
    margin-left: 24px;
 }
 
@@ -213,7 +219,7 @@
     display: block;
     height: 24px;
     font-size: 20px;
-    font-family: "AppleSDGothicNeo";
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 900;
     letter-spacing: -0.5px;
     text-align: left;
@@ -244,8 +250,8 @@
 
 .intr2 {
  color: #000;
- font-family: "AppleSDGothicNeo";
- font-weight: 500;
+ font-family: 'Noto Sans KR', sans-serif;
+ font-weight: 900;
  padding-inline-start:0px;
  float:left;
  margin-bottom: 30px;
@@ -263,8 +269,8 @@
 
 .intr3 {
  color: #000;
- font-family: "AppleSDGothicNeo";
- font-weight: 500;
+ font-family: 'Noto Sans KR', sans-serif;
+ font-weight: 900;
  padding-inline-start:0px;
  float:left;
  margin-top: 249px;
@@ -279,8 +285,8 @@
 
 .intr4 {
  color: #000;
- font-family: "AppleSDGothicNeo";
- font-weight: 500;
+ font-family: 'Noto Sans KR', sans-serif;
+ font-weight: 900;
  padding-inline-start:0px;
  margin-bottom:83px;
 
@@ -294,8 +300,8 @@
 
 .intr5 {
  color: #000;
- font-family: "AppleSDGothicNeo";
- font-weight: 500;
+ font-family: 'Noto Sans KR', sans-serif;
+ font-weight: 900;
  padding-inline-start:0px;
 
  text-align: left;
@@ -309,7 +315,7 @@
 
 .intr6 {
  color: #000;
- font-family: "AppleSDGothicNeo";
+ font-family: 'Noto Sans KR', sans-serif;
  font-weight: 800;
  padding-inline-start:0px;
  float:left;
@@ -323,8 +329,8 @@
 
 .intr7 {
  color: #000;
- font-family: "AppleSDGothicNeo";
- font-weight: 500;
+ font-family: 'Noto Sans KR', sans-serif;
+ font-weight: 700;
  padding-inline-start:0px;
  float:left;
 
@@ -352,8 +358,8 @@
  color: #000;
  display: block;
  color: #000;
- font-family: "AppleSDGothicNeo";
- font-weight: 500;
+ font-family: 'Noto Sans KR', sans-serif;
+ font-weight: 700;
  font-size:20px;
  padding: 50px 0px 50px 0px;
  margin-top:296px;
@@ -372,7 +378,7 @@
 
 .prof .profname {
  font-size:25px;
- font-family: "AppleSDGothicNeo";
+ font-family: 'Noto Sans KR', sans-serif;
  font-weight: 900;
  text-align: center;
 }
@@ -451,8 +457,8 @@ color: #000;
 display: block;
 height: 18px;
 font-size: 20px;
-font-family: "AppleSDGothicNeo";
-font-weight: 500;
+font-family: 'Noto Sans KR', sans-serif;
+font-weight: 900;
 letter-spacing: -0.5px;
 text-align: center;   
 line-height: 30px;
@@ -464,8 +470,8 @@ color: #000;
 display: block;
 height: 18px;
 font-size: 20px;
-font-family: "AppleSDGothicNeo";
-font-weight: 500;
+font-family: 'Noto Sans KR', sans-serif;
+font-weight: 900;
 letter-spacing: -0.5px;
 text-align: center;   
 line-height: 30px;
@@ -477,8 +483,8 @@ color: #000;
 display: block;
 height: 18px;
 font-size: 20px;
-font-family: "AppleSDGothicNeo";
-font-weight: 500;
+font-family: 'Noto Sans KR', sans-serif;
+font-weight: 900;
 letter-spacing: -0.5px;
 text-align: center;   
 line-height: 30px;
