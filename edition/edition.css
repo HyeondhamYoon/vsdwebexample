@@ -39,7 +39,6 @@
     text-decoration: none;
     color: #000;
     display: block;
-    height: 24px;
     font-size: 20px;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 900;
@@ -73,7 +72,6 @@
     text-decoration: none;
     color: #000;
     display: block;
-    height: 24px;
     font-size: 20px;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 900;
@@ -217,23 +215,12 @@
  #text1 {
     color: #00239C;
     display: block;
-    height: 24px;
     font-size: 20px;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 900;
     letter-spacing: -0.5px;
     text-align: left;
     margin-bottom: 60px;
-}
-
-
-
-#MOVE_TOP_BTN {
- position: fixed;
- right: 2%;
- bottom: 35px;
- display: none;
- z-index: 999;
 }
 
 .intr10 {
@@ -251,7 +238,7 @@
 .intr2 {
  color: #000;
  font-family: 'Noto Sans KR', sans-serif;
- font-weight: 900;
+ font-weight: 500;
  padding-inline-start:0px;
  float:left;
  margin-bottom: 30px;
@@ -270,7 +257,7 @@
 .intr3 {
  color: #000;
  font-family: 'Noto Sans KR', sans-serif;
- font-weight: 900;
+ font-weight: 500;
  padding-inline-start:0px;
  float:left;
  margin-top: 249px;
@@ -286,7 +273,7 @@
 .intr4 {
  color: #000;
  font-family: 'Noto Sans KR', sans-serif;
- font-weight: 900;
+ font-weight: 500;
  padding-inline-start:0px;
  margin-bottom:83px;
 
@@ -301,7 +288,7 @@
 .intr5 {
  color: #000;
  font-family: 'Noto Sans KR', sans-serif;
- font-weight: 900;
+ font-weight: 500;
  padding-inline-start:0px;
 
  text-align: left;
@@ -316,7 +303,7 @@
 .intr6 {
  color: #000;
  font-family: 'Noto Sans KR', sans-serif;
- font-weight: 800;
+ font-weight: 900;
  padding-inline-start:0px;
  float:left;
 
@@ -330,7 +317,7 @@
 .intr7 {
  color: #000;
  font-family: 'Noto Sans KR', sans-serif;
- font-weight: 700;
+ font-weight: 500;
  padding-inline-start:0px;
  float:left;
 
@@ -359,7 +346,7 @@
  display: block;
  color: #000;
  font-family: 'Noto Sans KR', sans-serif;
- font-weight: 700;
+ font-weight: 500;
  font-size:20px;
  padding: 50px 0px 50px 0px;
  margin-top:296px;
@@ -497,4 +484,11 @@ right: 2%;
 bottom: 35px;
 display: none;
 z-index: 999;
+}
+
+#logomini {
+   position: fixed;
+   left: 2.2%;
+   top: 10px;
+   display: none;
 }

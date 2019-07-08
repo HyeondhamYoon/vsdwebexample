@@ -39,7 +39,6 @@
       text-decoration: none;
       color: #000;
       display: block;
-      height: 24px;
       font-size: 20px;
       font-family: 'Noto Sans KR', sans-serif;
       font-weight: 900;
@@ -73,7 +72,6 @@
       text-decoration: none;
       color: #000;
       display: block;
-      height: 24px;
       font-size: 20px;
       font-family: 'Noto Sans KR', sans-serif;
       font-weight: 900;
@@ -120,10 +118,12 @@
 
    }
 
+
+   
   
    .box1{
       width: 726px;
-      margin-top: 80px;
+      margin-top: 84px;
       margin-left:auto;
       margin-right:auto;
       background: white;
@@ -162,7 +162,6 @@
    #text1 {
       color: #00239C;
       display: block;
-      height: 24px;
       font-size: 20px;
       font-family: 'Noto Sans KR', sans-serif;
       font-weight: 900;
@@ -177,7 +176,7 @@
    height: 18px;
    font-size: 20px;
    font-family: 'Noto Sans KR', sans-serif;
-   font-weight: 900;
+   font-weight: 500;
    letter-spacing: -0.5px;
    text-align: center;   
    line-height: 30px;
@@ -190,11 +189,11 @@
    height: 18px;
    font-size: 20px;
    font-family: 'Noto Sans KR', sans-serif;
-   font-weight: 900;
+   font-weight: 500;
    letter-spacing: -0.5px;
    text-align: center;   
    line-height: 30px;
-   margin-bottom: 156px;
+   margin-bottom: 188px;
 }
 
 #text4 {
@@ -203,7 +202,7 @@
    height: 18px;
    font-size: 20px;
    font-family: 'Noto Sans KR', sans-serif;
-   font-weight: 900;
+   font-weight: 500;
    letter-spacing: -0.5px;
    text-align: center;   
    line-height: 30px;

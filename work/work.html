@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="kr">
+
+<head>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="./work.css">
+   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+   <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+   <script type="text/javascript"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=hlvnjlgbp0"></script>
+
+   <script>
+      $(document).ready(function () {
+         // 처음 화면에 회, 팀, 작 아이콘 hide
+         $(".topmenuImg").hide();
+
+         // 메인로고 클릭 시 회, 팀, 작 아이콘 fadeIn 4초
+         $("#MainLogo").click(function () {
+            $(".topmenuImg").fadeIn('4000');
+            $("#MainLogo").hide();
+         });
+
+         // hover 아이콘 클릭 시 회, 팀, 작 아이콘 hide, 메인로고 faceIn 4초
+         $("#iconHover").click(function () {
+            $("#MainLogo").fadeIn('4000');
+            $(".topmenuImg").hide();
+         });
+
+         // 상단바 고정상태
+         var jbOffset = $('ul').offset();
+         $(window).scroll(function () {
+            if ($(document).scrollTop() > jbOffset.top) {
+               // 메뉴 이동 시 각 팀 이름 hide, '팀 소개' show
+               $(".introduceTeam").show();
+            }
+
+         });
+
+         //작은로고아이콘
+         $(function () {
+            $(window).scroll(function () {
+               if ($(this).scrollTop() > 500) {
+                  $('#logomini').fadeIn('4000');
+               } else {
+                  $('#logomini').fadeOut('4000');
+               }
+            });
+         });
+
+         //top으로 이동
+         $("#logomini").click(function (event) {
+            $('html, body').animate({ scrollTop: 0 }, 1000);
+         });
+
+         //스크롤아이콘
+         $(function () {
+            $(window).scroll(function () {
+               if ($(this).scrollTop() > 500) {
+                  $('#MOVE_TOP_BTN').fadeIn('4000');
+               } else {
+                  $('#MOVE_TOP_BTN').fadeOut('4000');
+               }
+            });
+         });
+
+         //top으로 이동
+         $("#MOVE_TOP_BTN").click(function (event) {
+            $('html, body').animate({ scrollTop: 0 }, 1000);
+         });
+      });
+   </script>
+</head>
+
+<body>
+
+   <div class="head">
+      <div class="title">
+         <div id="LOGO">
+            <a><img id="MainLogo" class="topmenuLogo" src="../image/logo.png"></a>
+            <div id="Modul">
+               <a href="../edition/edition.html"><img id="iconHover" class="topmenuImg" src="../image/h.png"></a>
+               <a href="../team/team.html"><img class="topmenuImg" src="../image/t.png"></a>
+               <a href="#"><img id="workBtn" class="topmenuImg" src="../image/jhover.png"></a>
+            </div>
+         </div>
+      </div>
+
+      <div class="nav" id="nav">
+         <ul id="introduceTeam" style="z-index:1;">
+            <li><a class="menuLink">ALL</a></li>
+            <li><a class="menuLink">출판</a></li>
+            <li><a class="menuLink">BX/UXUI</a></li>
+            <li><a class="menuLink">VP</a></li>
+            <li><a class="menuLink">영상</a></li>
+         </ul>
+      </div>
+   </div>
+
+   <div class="box">
+    <img id="print" src="../image/work/1/1.jpg">
+    <img id="print" src="../image/work/1/1.jpg">
+    <img id="print" src="../image/work/1/1.jpg">
+    <img id="print" src="../image/work/1/1.jpg">
+    <img id="print" src="../image/work/1/1.jpg">
+   </div>
+   </div>
+
+
+
+
+   <script src="./script.js"></script>
+
+   <a id="logomini"><img src="../image/logomini.png" width="30px !important"></a>
+   <a id="MOVE_TOP_BTN"><img src="../image/top.svg" width="50px !important"></a>
+
+</body>
+
+</html>

@@ -35,8 +35,6 @@
 
          });
 
-
-
          // hover 아이콘 클릭 시 회, 팀, 작 아이콘 hide, 메인로고 faceIn 4초
          $("#iconHover").click(function () {
             $("#MainLogo").fadeIn('4000');
@@ -51,6 +49,22 @@
                $(".introduceTeam").show();
             }
 
+         });
+
+         //작은로고아이콘
+         $(function () {
+            $(window).scroll(function () {
+               if ($(this).scrollTop() > 500) {
+                  $('#logomini').fadeIn('4000');
+               } else {
+                  $('#logomini').fadeOut('4000');
+               }
+            });
+         });
+
+         //top으로 이동
+         $("#logomini").click(function (event) {
+            $('html, body').animate({ scrollTop: 0 }, 1000);
          });
 
          //스크롤아이콘
@@ -157,8 +171,8 @@
       </div>
       <div class="intr10">
          <iframe src="https://player.vimeo.com/video/344136733?autoplay=1&loop=1&title=0&background=1" frameborder="0"
-            width="1224" height="688.5" allow="autoplay; fullscreen" allowfullscreen onmouseover="this.play()"
-            onmouseout="this.pause()" autobuffer="true" style="float:left;"></iframe>
+            width="122.4" height="68.85" autobuffer="true" onmouseover="this.play()"
+            onmouseout="this.pause()" loop="*" style="float:left;"></iframe>
       </div>
 
 
@@ -195,7 +209,7 @@
       <script>
          var map = new naver.maps.Map('icon30', {
             center: new naver.maps.LatLng(37.629073, 127.091755),
-            zoom: 13
+            zoom: 12
          });
 
          var marker = new naver.maps.Marker({
@@ -239,8 +253,8 @@
 
    <script src="./script.js"></script>
 
-
-   <a id="MOVE_TOP_BTN"><img src="../image/logomini.png"></a>
+   <a id="logomini"><img src="../image/logomini.png" width="30px !important"></a>
+   <a id="MOVE_TOP_BTN"><img src="../image/top.svg" width="50px !important"></a>
 
 </body>
 
