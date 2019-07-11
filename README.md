@@ -67,3 +67,22 @@
     </div>
 ...
 ```
+5. 영상의 경우 image 클래스 내의 첫 번째 이미지에 아래의 코드를 추가한다.
+   [ vimeo 주소.txt ] 에서 각 번호별 비메오 맨 뒤 주소(ex. 346993491)를 복사해서 넣으면 됨
+   # 예시로 [ /work/1/1.html ] 에 주석처리해서 넣어놨습니다!
+```
+[ /work/1/1.html ]
+...
+        <div class="image">
+
+            <!-- 비메오 링크 추가 -->
+            <div class="video">
+                <iframe src="https://player.vimeo.com/video/비메오 맨 뒤 주소?title=0&amp;byline=0&amp;portrait=0"
+                    width="640" height="360" frameborder="0"></iframe>
+            </div>
+
+            ...
+            <img src="./work/이미지이름.확장자" />
+        </div>
+...
+```
