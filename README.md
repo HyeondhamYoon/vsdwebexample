@@ -22,7 +22,6 @@
 	ㄴ [1]		         # 각 번호별 폴더
 	    ㄴ 1.html
 	    ㄴ 1.css
-	    ㄴ [work]
 	ㄴ [images]
 	     ㄴ[thumbnail]	# 썸네일이미지
    ㄴ [shareimages]

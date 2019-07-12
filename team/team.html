@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="kr">
+
+<head>
+    <title>서울여자대학교 36회 졸업전시</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./team.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap&subset=korean"
+        rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // 처음 화면에 모듈(회, 팀, 작) hide
+            $(".modulImg").hide();
+
+            // 처음 화면에 작은모듈(회, 팀, 작) hide
+            $(".minimodulImg").hide();
+
+            // 처음 화면에 각 팀 이름 hide
+            $("#hidemenu").hide();
+
+            // 메인로고(36) 클릭 시 모듈(회, 팀, 작) fadeIn 4초
+            $("#mainlogo36").click(function () {
+                $(".modulImg").fadeIn('4000');
+                $("#mainlogo36").hide();
+            });
+
+            // hover 모듈 클릭 시 모듈(회, 팀, 작) hide, 메인로고(36) fadeIn 4초
+            $("#modulHover").click(function () {
+                $("#mainlogo36").fadeIn('4000');
+                $(".modulImg").hide();
+            });
+
+            // '팀 소개' 클릭 시 각 팀 이름 보여짐
+            $(".introduceTeam").click(function () {
+                $(".introduceTeam").hide();
+                $(".menuLink").show();
+            })
+
+            // '각 팀 이름' 클릭 시 해당 위치로 이동
+            $("a[href^='#']").click(function (event) {
+                event.preventDefault();
+                var target = $(this.hash);
+                var header_height = $('.area_head').height();
+                var offset_top = target.offset().top - header_height - 200;
+                $('html, body').animate({ scrollTop: offset_top }, 1000);
+            });
+
+            // 상단바 고정
+            var menubar = $('#menubar').offset();
+            var head = document.getElementById('head');
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > menubar.top) {
+                    
+                    // 로고 hide
+                    $(".logo").hide();
+                    $("#mainlogo36").hide();
+                    $(".modulImg").hide();
+                    $(".minimodulImg").hide();
+
+                    // 작은로고(36) 클릭하면 작은모듈(회, 팀, 작) 보이게
+                    if($("#logomini").click(function (event) {
+                        $(".minimodulImg").fadeIn('500');
+                        $("#logomini").hide();
+                    }));
+
+                    // 작은 hover 모듈 클릭 시 작은모듈(회, 팀, 작) hide, 작은로고(36) fadeIn 4초
+                    if($("#minimodulHover").click(function () {
+                        $("#logomini").fadeIn('4000');
+                        $(".minimodulImg").hide();
+                    }));
+                    
+                    // 각 팀 이름 hide, '팀 소개' show
+                    $(".menuLink").hide();
+                    $(".introduceTeam").show();
+
+                    // 'logomini' fadeIn 2초
+                    $('#logomini').fadeIn('2000');
+
+                    // 상단고정
+                    head.style.position = "fixed";
+                    head.style.top = 0;
+
+                    // 마진값 조절
+                    $(".layout_first").removeClass("layout_first").addClass("layout_first_change");
+                    $("#showmenu").addClass("showmenu_margin");
+                }
+                else {
+                    // 메인로고 fadeIn 4초
+                    $(".logo").show();
+                    $("#mainlogo36").fadeIn('4000');
+                    $(".modulImg").hide();
+
+                    // 각 팀 이름 hide, '팀 소개' show
+                    $(".menuLink").hide();
+                    $(".introduceTeam").show();
+
+                    // 'logomini' hide
+                    $('#logomini').hide();
+
+                    // 상단고정 해제
+                    head.style.position = 'relative';
+
+                    // 마진값 원래대로 되돌리기
+                    $(".layout_first_change").removeClass("layout_first_change").addClass("layout_first");
+                    $("#showmenu").removeClass("showmenu_margin");
+                }
+            });
+
+            // 스크롤하면 'top' 아이콘 fadeIn/Out 4초
+            $(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 0) {
+                        $('#MOVE_TOP_BTN').show();
+                    } else {
+                        $('#MOVE_TOP_BTN').hide();
+                    }
+                });
+            });
+
+            //top으로 이동
+            $("#MOVE_TOP_BTN").click(function (event) {
+                $('html, body').animate({ scrollTop: 0 }, 1000);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="head" id="head">
+
+        <!-- 로고 -->
+        <div class="logo">
+            <!-- 메인로고(36) -->
+            <a><img id="mainlogo36" class="mainlogo36" src="../shareimages/logo.png"></a>
+
+            <!-- 모듈(회, 팀, 작) -->
+            <div id="modul">
+                <a href="../edition/edition.html"><img class="modulImg" src="../shareimages/edition.png"></a>
+                <a href="#"><img id="modulHover" class="modulImg" src="../shareimages/teamhover.png"></a>
+                <a href="../work/work.html"><img class="modulImg" src="../shareimages/work.png"></a>
+            </div>
+        </div>
+
+        <!-- 작은모듈(회, 팀, 작) -->
+        <div id="minimodul">
+                <a href="../edition/edition.html"><img class="minimodulImg" src="../shareimages/edition.png"></a>
+                <a href="#"><img id="minimodulHover" class="minimodulImg" src="../shareimages/teamhover.png"></a>
+                <a href="../work/work.html"><img class="minimodulImg" src="../shareimages/work.png"></a>
+        </div>
+
+        <!-- 메뉴바 -->
+        <div class="menubar" id="menubar">
+
+            <!-- 메뉴바 처음 보여지는 것 -->
+            <ul id="showmenu">
+                <li class="introduceTeam">팀 소개</li>
+            </ul>
+
+            <!-- 메뉴바 클릭하면 보여지는 것 -->
+            <ul id="hidemenu" class="menuLink">
+                <li><a class="menuLink" href="#menu1">기획</a></li>
+                <li><a class="menuLink" href="#menu2">그래픽</a></li>
+                <li><a class="menuLink" href="#menu3">도록</a></li>
+                <li><a class="menuLink" href="#menu4">설치</a></li>
+                <li><a class="menuLink" href="#menu5">웹</a></li>
+                <li><a class="menuLink" href="#menu6">영상</a></li>
+                <li><a class="menuLink" href="#menu7">행사</a></li>
+                <li><a class="menuLink" href="#menu8">회계</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 기획 -->
+    <div class="layout_first" id="menu1">
+        <img id="teamIcon" src="./images/consul.png">
+        <div id="teamTitle">기획 | 졸기졸부</div>
+        <div id="teamExplain">
+            팀명 : 졸전 기획팀 졸전 부수자<br>
+            팀원 : 박수현 전민경 김비아 김은희 남주연 배선영 전하진 조은지 한지윤<br><br>
+
+            위원장과 부위원장, 회계, 그리고 팀장들로 구성되어 있으며,<br>
+            전체 졸업전시생들을 대표하여 졸업전시 총괄 및 기획을 맡고 있습니다.<br>
+            모든 작품들이 빛날 수 있는 전시를 만드는 것이 저희의 목표입니다.<br>
+            성공적인 졸업 전시를 위해 그 누구보다 힘쓰고 있는 우리 팀원들 화이팅!
+        </div>
+    </div>
+
+    <!-- 그래픽 -->
+    <div class="layout" id="menu2">
+        <img id="teamIcon" src="./images/graphic.png">
+        <div id="teamTitle">그래픽 ㅣ 그!그!다!</div>
+        <div id="teamExplain">
+            팀명 : 그래픽! 그래픽! 다 부셔!<br>
+            팀원 : 배선영 이해리 이서정 손연희<br><br>
+
+            그래픽팀은 졸업전시 초기 기획에서 스타트 작업을 맡아<br>전체적인 졸전 주제에 맞는 그래픽 컨셉을 디자인합니다.<br>
+            대표적으로 포스터 디자인과 굿즈 등의 작업을 하며<br>다른 팀들과 지속적으로 그래픽 요소를 전달하며 협업을 합니다.<br>
+            실크스크린부터 촬영까지, 끝까지 열심히 달려온 그래픽팀 사랑합니다♥
+        </div>
+    </div>
+
+    <!-- 도록 -->
+    <div class="layout" id="menu3">
+        <img id="teamIcon" src="./images/book.png">
+        <div id="teamTitle">도록 ㅣ 도로록</div>
+        <div id="teamExplain">
+            팀명 : 도로록<br>
+            팀원 : 한지윤 최지원 김지현 손유진<br><br>
+
+            도록, 리플렛 등 출판물을 맡고 있습니다.<br>
+            도록은 도록도록하고 웁니다.<br>
+            네명이서 함께 도록캠프도 진행하는데 오셔도 됩니다.<br>
+            7월 안에 모든걸 끝내는게 목표입니다.<br>
+            여름방학을 반납해서 도로록( ´Д`) 우는거 아닙..흡 흐흑..조아요 졸전...
+        </div>
+    </div>
+
+    <!-- 설치 -->
+    <div class="layout" id="menu4">
+        <img id="teamIcon" src="./images/arch.png">
+        <div id="teamTitle">설치 ㅣ 건설팀</div>
+        <div id="teamExplain">
+            팀명 : 건강한 설치팀!<br>
+            팀원 : 남주연 권수진 박정희 박유진 김윤지 최유리 김지윤 유선주<br><br>
+
+            팀장과 부팀장을 주 축으로 기자재 팀, 외부업체 팀, 현수막 팀,
+            <br>용달 팀으로 구성해 전시 설치를 준비하고 있습니다! <br>노력한 만큼 멋진 전시가 될 수 있길, 파이팅!
+        </div>
+    </div>
+
+    <!-- 웹 -->
+    <div class="layout" id="menu5">
+        <img id="teamIcon" src="./images/web.png">
+        <div id="teamTitle">웹 ㅣ 웹져</div>
+        <div id="teamExplain">
+            팀명 : 웹 + 왹져 (외계인)<br>
+            팀원 : 전하진 김지원 이주은 이주현 윤현담 오아름<br><br>
+
+            웹져는 외계인과 무관한 팀입니다.<br>웹져는 서울여자대학교 시각디자인과 졸업전시회 아카이빙
+            사이트의 <br>페이지 구성 및 코딩, 사이트 관리를 맡고 있습니다.<br>현재 당신이 보고 있는 이 사이트는
+            웹져의 자력으로 제작하였습니다.<br>더 많이 알고 싶습니까? 웹웹!
+        </div>
+    </div>
+
+    <!-- 영상 -->
+    <div class="layout" id="menu6">
+        <img id="teamIcon" src="./images/movie.png">
+        <div id="teamTitle">영상ㅣ 영화</div>
+        <div id="teamExplain">
+            팀명 : 영상 화이팅<br>
+            팀원: 조은지 김도현 김지혜 백소연 신효재 안윤희<br><br>
+
+            ‘영상은 끝내는 게 아니라 멈추는 것이다.’<br>
+            끝이 나지 않는 영상편집에 지친 영상팀에게 힘을 주고자 만든 이름이다.<br>
+            영상에 재능있고 열정 있는 사람들이 모여<br>우리만의 졸전 단편영화를 만든다.
+        </div>
+    </div>
+
+    <!-- 행사 -->
+    <div class="layout" id="menu7">
+        <img id="teamIcon" src="./images/happy.png">
+        <div id="teamTitle">행사 ㅣ 행복가득한 행사팀</div>
+        <div id="teamExplain">
+            팀명 : 행복가득한 행사팀<br>
+            팀원 : 김비아 김혜수 송유나 나소연 김규리 신가은 이선영 박소현 박지영<br><br>
+
+            이 세상 끼, 이 세상 흥이 아닌<br>서울여자대학교 시각디자인학과 최강자들이 모인 행복한 행사팀입니다~<br>
+            36회 졸업전시의 대표적인 행사들을 맡아 진행하고 있습니다.
+            <br>역대 최고의 행사와 이벤트를 기획하는 것이 목표입니다.<br>
+            왜냐하면 저희는 먹는 것과 노는 것이 제일 자신 있기 때문입니다!<br>
+            그래서 행사팀 일이 너무 즐겁고 행복합니다.<br>
+            물론 디자인도 잘하고 졸업전시 준비도 행복해요^^
+        </div>
+    </div>
+
+    <!-- 회계 -->
+    <div class="layout" id="menu8">
+        <img id="teamIcon" src="./images/money.png">
+        <div id="teamTitle">회계 ㅣ 혼술횟집</div>
+        <div id="teamExplain">
+            팀명 : 혼술횟집<br>
+            팀원 : 김은희<br><br>
+
+            팀장과 팀원 혼자 다해먹습니다. 혼자 하는 회계라서 ‘혼술횟집’이래요.<br>
+            사실 이건 비밀인데, 비밀 팀원 엑셀씨가 함께 해주셔서 외롭진 않아요.^^ㅎ<br>
+            전체적으로 졸업 전시 예산을 관리하는 역할을 하고 있고,<br>
+            계산 실수 하지 않는 것이 목표입니다.<br>
+            서울여자대학교 36회 졸업전시 무사히 끝나길!
+        </div>
+    </div>
+
+    <!-- 작은로고 아이콘 -->
+    <a id="logomini"><img src="../shareimages/logomini.png" width="30px !important"></a>
+    <!-- top으로 이동 -->
+    <a id="MOVE_TOP_BTN"><img src="../shareimages/top.svg" width="50px !important"></a>
+
+</body>
+
+</html>

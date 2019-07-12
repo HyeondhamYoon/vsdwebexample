@@ -1,0 +1,199 @@
+.head{
+    width: 100%; 
+    background-color: #fff;
+}
+
+/* 로고 영역 */
+.logo {
+    text-align: center;
+    margin-top: 48px;
+    padding-bottom: 38px;
+    font-size: 0;
+}
+
+/* 메인로고(36) */
+.mainlogo36 {
+    height: 50px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* 모듈(회, 팀, 작) */
+#modul img {
+    width: 50px;
+    margin : 0px 20px 0px 20px;
+}
+
+/* 작은모듈(회, 팀, 작) */
+#minimodul {
+    text-align: center;
+}
+#minimodul img {
+    width: 30px;
+    margin : 10px 10px 5px 10px;
+}
+
+/* 메뉴바 */
+.menubar {
+    margin: 0px;
+    margin-top : 3px;
+    margin-bottom: 3px;
+    width: 100%;
+    text-align: center;
+}
+.menubar ul {
+    display: inline-block;
+    *display: inline;
+}
+.menubar li{
+    list-style-type: none;
+    float: left;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+/* '팀 소개' 마우스 올리면 물결 애니메이션 */
+#showmenu {
+    text-align: center;
+    padding-inline-start: 0px !important;
+    margin: 0px;
+}
+/* 스크롤 내리면 마진값 튀는거 수동보정 */
+.showmenu_margin {
+    margin-right: 16px !important;
+}
+.introduceTeam {
+    transition: .3s;
+    background-position: top left;
+    background-image: url(../shareimages/wave.png);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+
+    list-style-type: none;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.5px; 
+}
+
+.introduceTeam:hover {
+    transition: .6s .1s;
+    background-position: bottom right;
+
+}
+
+.introduceTeam:hover:before {
+    transition: .3s;
+    transform: translateY(-100%) scaleY(0);
+    opacity: 0;
+}
+
+/* '각 팀 이름' 마우스 올리면 물결 애니메이션 */
+#hidemenu {
+    text-align: center;
+    padding-inline-start: 0px !important;
+    margin: 0px;
+}
+
+.menuLink {
+    transition: .3s;
+    background-position: top left;
+    background-image: url(../shareimages/wave.png);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+
+    text-decoration: none;
+    color: #000;
+    display: block;
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    text-align: center;   
+}
+
+.menuLink:hover {
+    transition: .6s .1s;
+    background-position: bottom right;
+}
+
+.menuLink:hover:before {
+    transition: .3s;
+    transform: translateY(-100%) scaleY(0);
+    opacity: 0;
+}
+
+/* 상단 고정 시 마진 강제삭제 되는 것 때문에 따로 지정함 */
+.layout_first {
+    text-align: center;
+    margin-top: 120px;
+}
+.layout_first_change {
+    text-align: center;
+    margin-top: 290px;
+}
+
+.layout {
+    text-align: center;
+    margin-top: 200px;
+}
+
+/* 팀별 아이콘 */
+#teamIcon {
+    margin-bottom: 60px;
+}
+
+/* 팀 이름 */
+#teamTitle {
+    color: #00239C;
+    display: block;
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    text-align: center;  
+    margin-bottom: 40px; 
+}
+
+/* 팀 설명 */
+#teamExplain {
+    color: #000;
+    display: block;
+    font-size: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-align: center;   
+    line-height: 30px;
+    margin-bottom: 200px;
+}
+
+/* 맨 마지막 팀설명 마진값 변경해줌 */
+#teamExplain:nth-last-child(1) {
+    margin-bottom: 150px;
+}
+
+/* 'top' 아이콘 */
+#MOVE_TOP_BTN {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    display: none;
+    z-index: 999;
+ }
+
+ /* 'logomini' 아이콘 */
+ #logomini {
+    position: fixed;
+    left: 2.2%;
+    top: 10px;
+    display: none;
+ }
