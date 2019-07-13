@@ -1,0 +1,61 @@
+/* 배경에 텍스트 움직이는것 */
+body {
+    background: url('./images/index.gif') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* 가로세로 중앙정렬 */
+.moving {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+/* 무빙포스터 크기 */
+.moving img {
+    width: 508px;
+    height: 508px;
+}
+
+/* 텍스트 가운데정렬 */
+p {
+    text-align: center;
+}
+
+/* 'ENTER' 마우스 올리면 물결 애니메이션 */
+.text {
+    transition: .3s;
+    background-position: top left;
+    background-image: url(../shareimages/wave.png);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+
+    list-style-type: none;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.5px; 
+}
+
+.text:hover {
+    transition: .6s .1s;
+    background-position: bottom right;
+}
+
+.text:hover:before {
+    transition: .3s;
+    transform: translateY(-100%) scaleY(0);
+    opacity: 0;
+}
