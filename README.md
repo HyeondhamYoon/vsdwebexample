@@ -30,7 +30,7 @@
 2. 각 번호 이름으로 html 파일 이름을 수정한다.( ex. 2번작품 -> 2.html )
 3. html 파일 내에 image 클래스 안에 있는 이미지 src를 수정한다.<br>
    ( 구글드라이브에서 원하는 이미지 찾기 -> 마우스 오른쪽버튼 -> 공유 가능한 링크 가져오기 -> 이미지 주소 변환 )<br>
-   ( https://drive.google.com/drive/folders/1WcVQ55OEzBsDUtjvvZvA6P3Ylos3hEGY?usp=sharing )<br>a
+   ( https://drive.google.com/drive/folders/1WcVQ55OEzBsDUtjvvZvA6P3Ylos3hEGY?usp=sharing )<br>
    ( https://hellosamuel.github.io/2018/07/17/hexo/how-to-get-share-photo-url/#변환-툴 )
 ```
 [ /work/num/1.html ]
