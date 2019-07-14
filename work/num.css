@@ -1,3 +1,7 @@
+html {
+    cursor: url(http://drive.google.com/uc?export=view&id=10JPMQwh9f8wHi1lEOTe9ZwEMoUeNH3Vw), progress;
+}
+
 .layout {
     margin-top: 7%;
     margin-left: 5%;
@@ -87,4 +91,8 @@
     position: fixed;
     right: 2%;
     top: 1.5%;
- }
+}
+
+#xicon:hover {
+    cursor: url(http://drive.google.com/uc?export=view&id=1j7GcifYAIPJkNyAtbGkpngIhYxuo6XuX), progress;
+}

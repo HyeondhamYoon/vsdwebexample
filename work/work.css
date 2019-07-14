@@ -1,5 +1,5 @@
-html {
-    cursor: crosshair;
+* {
+    cursor:url(http://drive.google.com/uc?export=view&id=19raHS7zA_x8JbwTvwT61_W4f3CrPVc-D), progress;
 }
 
 .head{
@@ -162,6 +162,8 @@ html {
     -moz-transform: scale(1.02);
     -ms-transform: scale(1.02);
     -o-transform: scale(1.02);
+
+    cursor: url(http://drive.google.com/uc?export=view&id=1j7GcifYAIPJkNyAtbGkpngIhYxuo6XuX), progress;
 }
 
 /* 'top' 아이콘 */
