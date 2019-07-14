@@ -46,11 +46,6 @@
                 $(".modulExplain_1").removeClass("modulExplain_1").addClass("modulExplain_1_center");
                 $(".modulExplain_2").removeClass("modulExplain_2").addClass("modulExplain_2_center");
 
-                // 크기 작을 때 맨 위에서 페이지 시작 : layout_first_center 되어야 함 (상단고정 X, 가운데정렬 X -> 상단고정 X, 가운데정렬 O)
-                $(".layout_first").addClass("layout_first_center");
-                // 크기 작을 때 중간에서 페이지 시작 : layout_first_change_center 되어야 함 (상단고정 O, 가운데정렬 X -> 상단고정 O, 가운데정렬 O)
-                $(".layout_first_change").addClass("layout_first_change_center");
-
                 $(".poster").removeClass("poster").addClass("poster_center");
                 $(".posterExplain").removeClass("posterExplain").addClass("posterExplain_center");
 
@@ -79,11 +74,6 @@
                 $(".modulExplain").removeClass("modulExplain_center").addClass("modulExplain");
                 $(".modulExplain_1").removeClass("modulExplain_1_center").addClass("modulExplain_1");
                 $(".modulExplain_2").removeClass("modulExplain_2_center").addClass("modulExplain_2");
-
-                // 크기 클 때 맨 위에서 페이지 시작 : layaout_first 되어야 함 (상단고정 X, 가운데정렬 O -> 상단고정 X, 가운데정렬 X)
-                $(".layout_first_center").removeClass("layout_first_center").addClass("layout_first");
-                // 크기 클 때 중간에서 페이지 시작 : layout_first_change 되어야 함 (상단고정 O, 가운데정렬 O -> 상단고정 O, 가운데정렬 X)
-                $(".layout_first_change_center").removeClass("layout_first_change_center").addClass("layout_first_change");
 
                 $(".modulExplain_2_center").removeClass("modulExplain_2_center").addClass("modulExplain_2");
 
@@ -166,14 +156,8 @@
                     head.style.top = 0;
 
                     // 마진값 조절
-                    if (width <= 1686) {
-                        // 크기 작을 때 상단바 고정 안되어있을경우 : layout_first_change_center 되어야 함 (상단고정 X, 가운데정렬 O -> 상단고정 O, 가운데정렬 O)
-                        $(".layout_first_center").removeClass("layout_first_center").addClass("layout_first_change_center");
-                    }
-                    if (width1 > 1686) {
-                        // 크기 클 때 상단바 고정 안되어있을경우 : layout_first_change 되어야 함 (상단고정 X, 가운데정렬 X -> 상단고정 O, 가운데정렬 X)
-                        $(".layout_first").removeClass("layout_first").addClass("layout_first_change");
-                    }
+                    $(".layout_first").removeClass("layout_first").addClass("layout_first_change");
+                    
                     $("#hidemenu").addClass("hidemenu_margin");
                 }
                 else {
@@ -193,14 +177,7 @@
                     head.style.position = 'relative';
 
                     // 마진값 원래대로 되돌리기
-                    if (width <= 1686) {
-                        // 크기 작을 때 상단바 고정되어있을경우 : layout_first_center 되어야 함 (상단고정 O, 가운데정렬 O -> 상단고정 X, 가운데정렬 O)
-                        $(".layout_first_change_center").removeClass("layout_first_change_center").addClass("layout_first_center");
-                    }
-                    if (width1 > 1686) {
-                        // 크기 클 때 상단바 고정되어있을경우 : layout_first 되어야 함 (상단고정 O, 가운데정렬 X -> 상단고정 X, 가운데정렬 X)
-                        $(".layout_first_change").removeClass("layout_first_change").addClass("layout_first");
-                    }
+                    $(".layout_first_change").removeClass("layout_first_change").addClass("layout_first");
                     $("#showmenu").removeClass("showmenu_margin");
                 }
             });
@@ -217,11 +194,6 @@
                     $(".modulExplain").removeClass("modulExplain").addClass("modulExplain_center");
                     $(".modulExplain_1").removeClass("modulExplain_1").addClass("modulExplain_1_center");
                     $(".modulExplain_2").removeClass("modulExplain_2").addClass("modulExplain_2_center");
-
-                    // 크기 작을 때 맨 위에서 페이지 시작 : layout_first_center 되어야 함 (상단고정 X, 가운데정렬 X -> 상단고정 X, 가운데정렬 O)
-                    $(".layout_first").removeClass("layout_first").addClass("layout_first_center");
-                    // 크기 작을 때 중간에서 페이지 시작 : layout_first_change_center 되어야 함 (상단고정 O, 가운데정렬 X -> 상단고정 O, 가운데정렬 O)
-                    $(".layout_first_change").removeClass("layout_first_change").addClass("layout_first_change_center");
 
                     $(".poster").removeClass("poster").addClass("poster_center");
                     $(".posterExplain").removeClass("posterExplain").addClass("posterExplain_center");
@@ -252,11 +224,6 @@
                     $(".modulExplain_center").removeClass("modulExplain_center").addClass("modulExplain");
                     $(".modulExplain_1_center").removeClass("modulExplain_1_center").addClass("modulExplain_1");
                     $(".modulExplain_2_center").removeClass("modulExplain_2_center").addClass("modulExplain_2");
-
-                    // 크기 클 때 맨 위에서 페이지 시작 : layaout_first 되어야 함 (상단고정 X, 가운데정렬 O -> 상단고정 X, 가운데정렬 X)
-                    $(".layout_first_center").removeClass("layout_first_center").addClass("layout_first");
-                    // 크기 클 때 중간에서 페이지 시작 : layout_first_change 되어야 함 (상단고정 O, 가운데정렬 O -> 상단고정 O, 가운데정렬 X)
-                    $(".layout_first_change_center").removeClass("layout_first_change_center").addClass("layout_first_change");
 
                     $(".poster_center").removeClass("poster_center").addClass("poster");
                     $(".posterExplain_center").removeClass("posterExplain_center").addClass("posterExplain");

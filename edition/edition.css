@@ -148,17 +148,6 @@
     margin-right: 80px;
     margin-bottom: 1006px;
 }
-/* (반응형) 크기 작아지면 레이아웃 변경되는 것 때문에 따로 지정함 */
-.layout_first_center {
-    text-align: center;
-    margin-top: 120px;
-    margin-bottom: 1006px;
-}
-.layout_first_change_center {
-    text-align: center;
-    margin-top: 290px;
-    margin-bottom: 1006px;
-}
 
 /* 포스터 레이아웃 */
 .layout_poster {
