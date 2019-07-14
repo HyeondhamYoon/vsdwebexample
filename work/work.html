@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="kr">
+
+<head>
+    <title>서울여자대학교 36회 졸업전시</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./work.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap&subset=korean"
+        rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // 처음 화면에 모듈(회, 팀, 작) hide
+            $(".modulImg").hide();
+
+            // 처음 화면 크기 받아와서 정렬 방식 지정
+            var width = $(window).width();
+            
+            //마우스 over일 때 이미지 변경 (애니메이션 없는거)
+            $(".imgchange img").mouseover(function () {
+                $(this).attr("src", $(this).attr("src").replace("Before.png", "thumb.png"));
+            });
+
+            //마우스 out일 때 이미지 원래대로 돌리기 (애니메이션 없는거)
+            $(".imgchange img").mouseleave(function () {
+                $(this).attr("src", $(this).attr("src").replace("thumb.png", "Before.png"));
+            });
+
+            // 레이아웃 다섯개
+            if (width > 1880) {
+                $(".scale").removeClass("scale").addClass("scale_5");
+            }
+            else if (width > 1530) {
+                $(".scale").removeClass("scale").addClass("scale_4");
+            }
+            else if (width > 1180) {
+                $(".scale").removeClass("scale").addClass("scale_3");
+            }
+            else if (width > 880) {
+                $(".scale").removeClass("scale").addClass("scale_2");
+            }
+            else {
+                $(".scale").removeClass("scale").addClass("scale_1");
+            }
+
+            // (반응형) 화면 줄어들면 가운데정렬로 변경, 마진값 조절
+            $(window).resize(function () {
+                var width = $(window).width();
+                if (width > 1880) {
+                    $(".scale_1").removeClass("scale_1").addClass("scale_5");
+                    $(".scale_2").removeClass("scale_2").addClass("scale_5");
+                    $(".scale_3").removeClass("scale_3").addClass("scale_5");
+                    $(".scale_4").removeClass("scale_4").addClass("scale_5");
+                }
+                else if (width > 1530) {
+                    $(".scale_1").removeClass("scale_1").addClass("scale_4");
+                    $(".scale_2").removeClass("scale_2").addClass("scale_4");
+                    $(".scale_3").removeClass("scale_3").addClass("scale_4");
+                    $(".scale_5").removeClass("scale_5").addClass("scale_4");
+                }
+                else if (width > 1180) {
+                    $(".scale_1").removeClass("scale_1").addClass("scale_3");
+                    $(".scale_2").removeClass("scale_2").addClass("scale_3");
+                    $(".scale_4").removeClass("scale_4").addClass("scale_3");
+                    $(".scale_5").removeClass("scale_5").addClass("scale_3");
+                }
+                else if (width > 880) {
+                    $(".scale_1").removeClass("scale_1").addClass("scale_2");
+                    $(".scale_3").removeClass("scale_3").addClass("scale_2");
+                    $(".scale_4").removeClass("scale_4").addClass("scale_2");
+                    $(".scale_5").removeClass("scale_5").addClass("scale_2");
+                }
+                else {
+                    $(".scale_2").removeClass("scale_2").addClass("scale_1");
+                    $(".scale_3").removeClass("scale_3").addClass("scale_1");
+                    $(".scale_4").removeClass("scale_4").addClass("scale_1");
+                    $(".scale_5").removeClass("scale_5").addClass("scale_1");
+                }
+            });
+
+            // 마우스 over일 때 이미지 변경 (애니메이션 없는거)
+            $(".imgchange img").mouseover(function () {
+                $(this).attr("src", $(this).attr("src").replace("Before.png", "thumb.png"));
+            });
+
+            //마우스 out일 때 이미지 원래대로 돌리기 (애니메이션 없는거)
+            $("#imgchange img").mouseleave(function () {
+                $(this).attr("src", $(this).attr("src").replace("thumb.png", "Before.png"));
+            });
+
+            // 메인로고(36) 클릭 시 모듈(회, 팀, 작) fadeIn 4초
+            $("#mainlogo36").click(function () {
+                $(".modulImg").fadeIn('4000');
+                $("#mainlogo36").hide();
+            });
+
+            // hover 모듈 클릭 시 모듈(회, 팀, 작) hide, 메인로고(36) fadeIn 4초
+            $("#modulHover").click(function () {
+                $("#mainlogo36").fadeIn('4000');
+                $(".modulImg").hide();
+            });
+
+            // ALL(id="all") 클릭하면 전체 작품 보이게
+            $("#all").click(function (event) {
+                $(".print_img").show();
+                $(".bxuxui_img").show();
+                $(".vp_img").show();
+                $(".movie_img").show();
+            });
+
+            // 출판(id="print") 클릭하면 출판 작품만 보이게
+            $("#print").click(function (event) {
+                $(".print_img").show();
+                $(".bxuxui_img").hide();
+                $(".vp_img").hide();
+                $(".movie_img").hide();
+            });
+
+            // bxuxui(id="bxuxui") 클릭하면 bxuxui 작품만 보이게
+            $("#bxuxui").click(function (event) {
+                $(".print_img").hide();
+                $(".bxuxui_img").show();
+                $(".vp_img").hide();
+                $(".movie_img").hide();
+            });
+
+            // vp(id="vp") 클릭하면 vp 작품만 보이게
+            $("#vp").click(function (event) {
+                $(".print_img").hide();
+                $(".bxuxui_img").hide();
+                $(".vp_img").show();
+                $(".movie_img").hide();
+            });
+
+            // 영상(id="movie") 클릭하면 영상 작품만 보이게
+            $("#movie").click(function (event) {
+                $(".print_img").hide();
+                $(".bxuxui_img").hide();
+                $(".vp_img").hide();
+                $(".movie_img").show();
+            });
+
+
+            // 스크롤하면 'top' 아이콘 fadeIn/Out 4초
+            $(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 0) {
+                        $('#MOVE_TOP_BTN').show();
+                    } else {
+                        $('#MOVE_TOP_BTN').hide();
+                    }
+                });
+            });
+
+            //top으로 이동
+            $("#MOVE_TOP_BTN").click(function (event) {
+                $('html, body').animate({ scrollTop: 0 }, 1000);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="head" id="head">
+
+        <!-- 로고 -->
+        <div class="logo">
+            <!-- 메인로고(36) -->
+            <a><img id="mainlogo36" class="mainlogo36" src="../shareimages/logo.png"></a>
+
+            <!-- 모듈(회, 팀, 작) -->
+            <div id="modul">
+                <a href="../edition/edition.html"><img class="modulImg" src="../shareimages/edition.png"></a>
+                <a href="../team/team.html"><img class="modulImg" src="../shareimages/team.png"></a>
+                <a href="#"><img id="modulHover" class="modulImg" src="../shareimages/workhover.png"></a>
+            </div>
+        </div>
+
+        <!-- 메뉴바 -->
+        <div class="menubar" id="menubar">
+            <ul id="showmenu" class="menuLink">
+                <li><a class="menuLink" id="all">ALL</a></li>
+                <li><a class="menuLink" id="print">출판</a></li>
+                <li><a class="menuLink" id="bxuxui">BX/UXUI</a></li>
+                <li><a class="menuLink" id="vp">VP</a></li>
+                <li><a class="menuLink" id="movie">영상</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="scale">
+        <!-- (for문으로 제발 바꾸자..)  -->
+        <!-- bxuxui 이미지 -->
+        <a class="imgchange" href="./num/1.html"><img src='./images/thumbnail/1_Before.png' id='imgchange' class='bxuxui_img' /></a>
+        <a class="imgchange" href="./num/2.html"><img src='./images/thumbnail/2_Before.png' id='imgchange' class='bxuxui_img' /></a>
+        <a class="imgchange" href="./num/3.html"><img src='./images/thumbnail/3_Before.png' id='imgchange' class='bxuxui_img' /></a>
+        <a class="imgchange" href="./num/4.html"><img src='./images/thumbnail/4_Before.png' id='imgchange' class='bxuxui_img' /></a>
+        <a class="imgchange" href="./num/5.html"><img src='./images/thumbnail/5_Before.png' id='imgchange' class='bxuxui_img' /></a>
+        <a class="imgchange" href="./num/6.html"><img src='./images/thumbnail/6_Before.png' id='imgchange' class='bxuxui_img' /></a>
+        <a class="imgchange" href="./num/7.html"><img src='./images/thumbnail/7_Before.png' id='imgchange' class='bxuxui_img' /></a>
+        <a class="imgchange" href="./num/8.html"><img src='./images/thumbnail/8_Before.png' id='imgchange' class='bxuxui_img' /></a>
+        <a class="imgchange" href="./num/9.html"><img src='./images/thumbnail/9_Before.png' id='imgchange' class='bxuxui_img' /></a>
+        <a class="imgchange" href="./num/10.html"><img src='./images/thumbnail/10_Before.png' id='imgchange' class='bxuxui_img' /></a>
+        <a class="imgchange" href="./num/11.html"><img src='./images/thumbnail/11_Before.png' id='imgchange' class='bxuxui_img' /></a>
+
+        <!-- vp 이미지 -->
+        <a class="imgchange" href="./num/12.html"><img src='./images/thumbnail/12_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/13.html"><img src='./images/thumbnail/13_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/14.html"><img src='./images/thumbnail/14_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/15.html"><img src='./images/thumbnail/15_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/16.html"><img src='./images/thumbnail/16_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/17.html"><img src='./images/thumbnail/17_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/18.html"><img src='./images/thumbnail/18_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/19.html"><img src='./images/thumbnail/19_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/20.html"><img src='./images/thumbnail/20_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/21.html"><img src='./images/thumbnail/21_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/22.html"><img src='./images/thumbnail/22_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/23.html"><img src='./images/thumbnail/23_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/24.html"><img src='./images/thumbnail/24_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/25.html"><img src='./images/thumbnail/25_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/26.html"><img src='./images/thumbnail/26_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/27.html"><img src='./images/thumbnail/27_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/28.html"><img src='./images/thumbnail/28_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/29.html"><img src='./images/thumbnail/29_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/30.html"><img src='./images/thumbnail/30_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/31.html"><img src='./images/thumbnail/31_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/32.html"><img src='./images/thumbnail/32_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/33.html"><img src='./images/thumbnail/33_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/34.html"><img src='./images/thumbnail/34_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/35.html"><img src='./images/thumbnail/35_Before.png' id='imgchange' class='vp_img' /></a>
+        <a class="imgchange" href="./num/36.html"><img src='./images/thumbnail/36_Before.png' id='imgchange' class='vp_img' /></a>
+
+        <!-- 출판 이미지 -->
+        <a class="imgchange" href="./num/37.html"><img src='./images/thumbnail/37_Before.png' id='imgchange' class='print_img' /></a>
+        <a class="imgchange" href="./num/38.html"><img src='./images/thumbnail/38_Before.png' id='imgchange' class='print_img' /></a>
+        <img src='./images/thumbnail/39_Before.png' id='imgchange' class='print_img' />
+        <a class="imgchange" href="./num/40.html"><img src='./images/thumbnail/40_Before.png' id='imgchange' class='print_img' /></a>
+        <a class="imgchange" href="./num/41.html"><img src='./images/thumbnail/41_Before.png' id='imgchange' class='print_img' /></a>
+        <a class="imgchange" href="./num/42.html"><img src='./images/thumbnail/42_Before.png' id='imgchange' class='print_img' /></a>
+        <a class="imgchange" href="./num/43.html"><img src='./images/thumbnail/43_Before.png' id='imgchange' class='print_img' /></a>
+        <a class="imgchange" href="./num/44.html"><img src='./images/thumbnail/44_Before.png' id='imgchange' class='print_img' /></a>
+        <a class="imgchange" href="./num/45.html"><img src='./images/thumbnail/45_Before.png' id='imgchange' class='print_img' /></a>
+        <a class="imgchange" href="./num/46.html"><img src='./images/thumbnail/46_Before.png' id='imgchange' class='print_img' /></a>
+        <a class="imgchange" href="./num/47.html"><img src='./images/thumbnail/47_Before.png' id='imgchange' class='print_img' /></a>
+        <a class="imgchange" href="./num/48.html"><img src='./images/thumbnail/48_Before.png' id='imgchange' class='print_img' /></a>
+        <a class="imgchange" href="./num/49.html"><img src='./images/thumbnail/49_Before.png' id='imgchange' class='print_img' /></a>
+        <a class="imgchange" href="./num/50.html"><img src='./images/thumbnail/50_Before.png' id='imgchange' class='print_img' /></a>
+        <a class="imgchange" href="./num/51.html"><img src='./images/thumbnail/51_Before.png' id='imgchange' class='print_img' /></a>
+        <a class="imgchange" href="./num/52.html"><img src='./images/thumbnail/52_Before.png' id='imgchange' class='print_img' /></a>
+        <a class="imgchange" href="./num/53.html"><img src='./images/thumbnail/53_Before.png' id='imgchange' class='print_img' /></a>
+
+        <!-- 영상 이미지 -->
+        <a class="imgchange" href="./54/54.html"><img src='./images/thumbnail/54_Before.png' id='imgchange' class='movie_img' /></a>
+        <a class="imgchange" href="./55/55.html"><img src='./images/thumbnail/55_Before.png' id='imgchange' class='movie_img' /></a>
+        <a class="imgchange" href="./56/56.html"><img src='./images/thumbnail/56_Before.png' id='imgchange' class='movie_img' /></a>
+        <a class="imgchange" href="./57/57.html"><img src='./images/thumbnail/57_Before.png' id='imgchange' class='movie_img' /></a>
+        <a class="imgchange" href="./58/58.html"><img src='./images/thumbnail/58_Before.png' id='imgchange' class='movie_img' /></a>
+        <a class="imgchange" href="./59/59.html"><img src='./images/thumbnail/59_Before.png' id='imgchange' class='movie_img' /></a>
+        <a class="imgchange" href="./60/60.html"><img src='./images/thumbnail/60_Before.png' id='imgchange' class='movie_img' /></a>
+        <a class="imgchange" href="./61/61.html"><img src='./images/thumbnail/61_Before.png' id='imgchange' class='movie_img' /></a>
+        <a class="imgchange" href="./62/62.html"><img src='./images/thumbnail/62_Before.png' id='imgchange' class='movie_img' /></a>
+        <a class="imgchange" href="./63/63.html"><img src='./images/thumbnail/63_Before.png' id='imgchange' class='movie_img' /></a>
+        <a class="imgchange" href="./64/64.html"><img src='./images/thumbnail/64_Before.png' id='imgchange' class='movie_img' /></a>
+        <a class="imgchange" href="./65/65.html"><img src='./images/thumbnail/65_Before.png' id='imgchange' class='movie_img' /></a>
+        <a class="imgchange" href="./66/66.html"><img src='./images/thumbnail/66_Before.png' id='imgchange' class='movie_img' /></a>
+        <a class="imgchange" href="./67/67.html"><img src='./images/thumbnail/67_Before.png' id='imgchange' class='movie_img' /></a>
+    </div>
+    </div>
+
+    <!-- top으로 이동 -->
+    <a id="MOVE_TOP_BTN"><img src="../shareimages/top.svg" width="50px !important"></a>
+
+</body>
+
+</html>

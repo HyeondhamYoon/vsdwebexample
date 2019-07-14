@@ -1,0 +1,543 @@
+.head{
+    width: 100%; 
+    background-color: #fff;
+}
+
+/* 로고 영역 */
+.logo {
+    text-align: center;
+    margin-top: 48px;
+    padding-bottom: 38px;
+    font-size: 0;
+}
+
+/* 메인로고(36) */
+.mainlogo36 {
+    height: 50px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* 모듈(회, 팀, 작) */
+#modul img {
+    width: 50px;
+    margin : 0px 20px 0px 20px;
+}
+
+/* 작은모듈(회, 팀, 작) */
+#minimodul {
+    text-align: center;
+}
+#minimodul img {
+    width: 30px;
+    margin : 10px 10px 5px 10px;
+}
+
+/* 메뉴바 */
+.menubar {
+    margin: 0px;
+    margin-top : 3px;
+    margin-bottom: 3px;
+    width: 100%;
+    text-align: center;
+}
+
+.menubar ul {
+    display: inline-block;
+    *display: inline;
+    padding-inline-start: 0px;
+}
+.menubar li{
+    list-style-type: none;
+    float: left;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+/* '각 메뉴 내용' 마우스 올리면 물결 애니메이션 */
+#showmenu {
+    text-align: center;
+    padding-inline-start: 0px !important;
+    margin: 0px;
+}
+
+.menuLink {
+    transition: .3s;
+    background-position: top left;
+    background-image: url(../shareimages/wave.png);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+
+    list-style-type: none;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.5px;   
+}
+
+.menuLink:hover {
+    transition: .6s .1s;
+    background-position: bottom right;
+}
+
+.menuLink:hover:before {
+    transition: .3s;
+    transform: translateY(-100%) scaleY(0);
+    opacity: 0;
+}
+
+/* 상단바 고정 시 fadeIn 효과 주려고 분리함 */
+/* '각 메뉴 내용' 마우스 올리면 물결 애니메이션 */
+#hidemenu {
+    text-align: center;
+    padding-inline-start: 0px !important;
+    margin: 0px;
+}
+/* 스크롤 내리면 마진값 튀는거 수동보정 */
+.hidemenu_margin {
+    margin-right: 16px !important;
+}
+
+.hidemenuLink {
+    transition: .3s;
+    background-position: top left;
+    background-image: url(../shareimages/wave.png);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+
+    list-style-type: none;
+    text-decoration: none;
+    color: #000;
+    display: block;
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.5px;   
+}
+
+.hidemenuLink:hover {
+    transition: .6s .1s;
+    background-position: bottom right;
+}
+
+.hidemenuLink:hover:before {
+    transition: .3s;
+    transform: translateY(-100%) scaleY(0);
+    opacity: 0;
+}
+
+/* 상단 고정 시 마진 강제삭제 되는 것 때문에 따로 지정함 */
+.layout_first {
+    text-align: center;
+    margin-top: 120px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 1006px;
+}
+.layout_first_change {
+    text-align: center;
+    margin-top: 290px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 1006px;
+}
+/* (반응형) 크기 작아지면 레이아웃 변경되는 것 때문에 따로 지정함 */
+.layout_first_center {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 1006px;
+}
+.layout_first_change_center {
+    text-align: center;
+    margin-top: 290px;
+    margin-bottom: 1006px;
+}
+
+/* 포스터 레이아웃 */
+.layout_poster {
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 540px;
+}
+
+/* 포스터 레이아웃 가운데정렬 */
+.layout_poster_center {
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 150px;
+}
+
+/* 교수진 레이아웃 */
+.layout_prof {
+    text-align: center;
+    margin-top: 230px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 722px;
+}
+
+/* 교수진 레이아웃 가운데정렬 */
+.layout_prof_center {
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 300px;
+}
+
+/* 오시는 길 레이아웃 */
+.layout_map {
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 840px;
+}
+
+/* 오시는 길 레이아웃 가운데정렬 */
+.layout_map_center {
+    text-align: center;
+    margin-top: 150px;
+    margin-bottom: 486px;
+}
+
+/* 전시도면 레이아웃 */
+.layout_domyun {
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 40px;
+}
+
+/* 전시도면 레이아웃 가운데정렬 */
+.layout_domyun_center {
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 40px;
+}
+
+/* 메뉴 이름 */
+.editionTitle {
+    color: #00239C;
+    display: block;
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    text-align: left;  
+    margin-bottom: 40px; 
+}
+
+/* 메뉴 이름 가운데정렬 */
+.editionTitle_center {
+    color: #00239C;
+    display: block;
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    text-align: center !important;  
+    margin-bottom: 40px; 
+}
+
+/* 모듈 이미지 */
+.modul {
+    width: 542px;
+    margin-right: 60px;
+    float: left;
+}
+
+/* 모듈 이미지 가운데정렬 */
+.modul_center {
+    width: 400px;
+    float: center;
+}
+
+/* 모듈 설명 */
+.modulExplain {
+    float: right;
+    color: #000;
+    display: block;
+    margin-top: 229px;
+    font-size: 100%;
+    font-weight: 500;
+    letter-spacing: -0.2417px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: left;
+    padding-inline-start:0px;
+}
+.modulExplain_1 {
+    float:left;
+    margin-right:20px;
+    line-height: 30px;
+    width: 355px;
+}
+.modulExplain_2 {
+    float:left;
+    line-height: 23px;
+    width: 360px;
+}
+
+/* 모듈 설명 가운데정렬 */
+.modulExplain_center {
+    color: #000;
+    display: block;
+    margin-top: 40px;
+    font-size: 100%;
+    font-weight: 500;
+    letter-spacing: -0.2417px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: left;
+    padding-inline-start:0px;
+    width: 421px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.modulExplain_1_center {
+    line-height: 23px;
+    margin-bottom: 40px;
+}
+.modulExplain_2_center {
+    line-height: 23px;
+}
+
+/* 포스터 */
+.poster {
+    width: 500px;
+    margin-right: 20px;
+    float: left;
+}
+
+/* 포스터 가운데정렬 */
+.poster_center {
+    width: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* 영상 */
+.video {
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.video iframe,
+.video object,
+.video embed {
+    top: 0;
+    left: 0;
+    width: 1020px;
+    height: 680px;
+}
+
+/* 영상 가운데정렬 */
+.video_center {
+    overflow: hidden;
+}
+
+.video_center iframe,
+.video_center object,
+.video_center embed {
+    top: 0;
+    left: 0;
+    width: 420px;
+    height: 280px;
+}
+
+/* 포스터 설명 */
+.posterExplain {
+    float: right;
+    color: #000;
+    display: block;
+    font-size: 100%;
+    font-weight: 500;
+    letter-spacing: -0.2417px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: left;
+    padding-inline-start:0px;
+    width: 360px;
+    line-height: 23px;
+}
+.posterExplain_1 {
+    margin-bottom:20px;
+}
+
+/* 포스터 설명 가운데정렬 */
+.posterExplain_center {
+    color: #000;
+    display: block;
+    font-size: 100%;
+    font-weight: 500;
+    letter-spacing: -0.2417px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: left;
+    padding-inline-start:0px;
+    line-height: 23px;
+    width: 421px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 교수진 설명 */
+.profExplain {
+    color: #000;
+    display: block;
+    font-size: 100%;
+    font-weight: 500;
+    letter-spacing: -0.2417px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    padding-inline-start:0px;
+    line-height: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+}
+
+/* 교수진 설명 가운데정렬 */
+.profExplain_center {
+    color: #000;
+    display: block;
+    font-size: 100%;
+    font-weight: 500;
+    letter-spacing: -0.2417px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    padding-inline-start:0px;
+    line-height: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 460px;
+}
+
+.prof {
+    list-style:none;
+    text-decoration: none;
+    padding: 50px 0px 50px 0px;
+}
+   
+.profLI {
+    width:300px;
+    margin-bottom: 40px;
+    float:left;
+    margin-top:296px;
+}
+
+.profLI_center {
+    width:230px;
+    margin-bottom: 40px;
+    float:left;
+}
+   
+.profname {
+    font-weight: 900;
+}
+
+/* 지도 */
+.map {
+    width: 500px;
+    margin-right: 20px;
+    float: left;
+}
+
+/* 지도 가운데정렬 */
+.map_center {
+    width: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* 지도 설명 */
+.mapExplain {
+    float: right;
+    color: #000;
+    display: block;
+    font-size: 100%;
+    letter-spacing: -0.2417px;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-inline-start:0px;
+    line-height: 23px;
+}
+
+.mapExplain_1 {
+    float:left;
+    margin-right:20px;
+    font-weight: 900;
+    text-align: right;
+    width: 80px;
+}
+.mapExplain_2 {
+    float:left;
+    font-weight: 500;
+    text-align: left;
+    width: 390px;
+}
+
+/* 지도 설명 가운데정렬 */
+.mapExplain_center {
+    color: #000;
+    display: block;
+    margin-top: 40px;
+    font-size: 100%;
+    letter-spacing: -0.2417px;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-inline-start:0px;
+    line-height: 23px;
+    width: 490px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 네이버 지도 */
+.navermap {
+    width: 500px;
+    height: 500px;
+    position: static !important;
+    float: left;
+}
+
+/* 네이버지도 가운데정렬 */
+.navermap_center {
+    width: 200px;
+    height: 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: static !important;
+    float: left;
+}
+
+/* 도면 */
+.domyun {
+    width: 100%;
+}
+
+/* 도면 가운데정렬 */
+.domyun_center {
+    width: 500px;
+}
+
+/* 'top' 아이콘 */
+#MOVE_TOP_BTN {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    display: none;
+    z-index: 999;
+ }
+
+ /* 'logomini' 아이콘 */
+ #logomini {
+    position: fixed;
+    left: 2.2%;
+    top: 10px;
+    display: none;
+ }

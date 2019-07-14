@@ -57,7 +57,7 @@
             var head = document.getElementById('head');
             $(window).scroll(function () {
                 if ($(document).scrollTop() > menubar.top) {
-                    
+
                     // 로고 hide
                     $(".logo").hide();
                     $("#mainlogo36").hide();
@@ -65,17 +65,17 @@
                     $(".minimodulImg").hide();
 
                     // 작은로고(36) 클릭하면 작은모듈(회, 팀, 작) 보이게
-                    if($("#logomini").click(function (event) {
+                    if ($("#logomini").click(function (event) {
                         $(".minimodulImg").fadeIn('500');
                         $("#logomini").hide();
                     }));
 
                     // 작은 hover 모듈 클릭 시 작은모듈(회, 팀, 작) hide, 작은로고(36) fadeIn 4초
-                    if($("#minimodulHover").click(function () {
+                    if ($("#minimodulHover").click(function () {
                         $("#logomini").fadeIn('4000');
                         $(".minimodulImg").hide();
                     }));
-                    
+
                     // 각 팀 이름 hide, '팀 소개' show
                     $(".menuLink").hide();
                     $(".introduceTeam").show();
@@ -151,9 +151,9 @@
 
         <!-- 작은모듈(회, 팀, 작) -->
         <div id="minimodul">
-                <a href="../edition/edition.html"><img class="minimodulImg" src="../shareimages/edition.png"></a>
-                <a href="#"><img id="minimodulHover" class="minimodulImg" src="../shareimages/teamhover.png"></a>
-                <a href="../work/work.html"><img class="minimodulImg" src="../shareimages/work.png"></a>
+            <a href="../edition/edition.html"><img class="minimodulImg" src="../shareimages/edition.png"></a>
+            <a href="#"><img id="minimodulHover" class="minimodulImg" src="../shareimages/teamhover.png"></a>
+            <a href="../work/work.html"><img class="minimodulImg" src="../shareimages/work.png"></a>
         </div>
 
         <!-- 메뉴바 -->

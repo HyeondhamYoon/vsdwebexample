@@ -1,0 +1,170 @@
+.head{
+    width: 100%; 
+    background-color: #fff;
+}
+
+/* 로고 영역 */
+.logo {
+    text-align: center;
+    margin-top: 48px;
+    padding-bottom: 38px;
+    font-size: 0;
+}
+
+/* 메인로고(36) */
+.mainlogo36 {
+    height: 50px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* 모듈(회, 팀, 작) */
+#modul img {
+    width: 50px;
+    margin : 0px 20px 0px 20px;
+}
+
+/* 작은모듈(회, 팀, 작) */
+#minimodul {
+    text-align: center;
+}
+#minimodul img {
+    width: 30px;
+    margin : 10px 10px 5px 10px;
+}
+
+/* 메뉴바 */
+.menubar {
+    margin: 0px;
+    margin-top : 3px;
+    margin-bottom: 3px;
+    width: 100%;
+    text-align: center;
+}
+.menubar ul {
+    display: inline-block;
+    *display: inline;
+}
+.menubar li{
+    list-style-type: none;
+    float: left;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+/* '작품 분류' 마우스 올리면 물결 애니메이션 */
+#showmenu {
+    text-align: center;
+    padding-inline-start: 0px !important;
+    margin: 0px;
+}
+
+.menuLink {
+    transition: .3s;
+    background-position: top left;
+    background-image: url(../shareimages/wave.png);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+
+    text-decoration: none;
+    color: #000;
+    display: block;
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    text-align: center;   
+}
+
+.menuLink:hover {
+    transition: .6s .1s;
+    background-position: bottom right;
+}
+
+.menuLink:hover:before {
+    transition: .3s;
+    transform: translateY(-100%) scaleY(0);
+    opacity: 0;
+}
+
+/* 이미지 레이아웃 */
+.scale_5 {
+    padding: 0px 65px 0px 65px;
+    margin-top: 140px;
+
+    width: 1750px;
+    text-align: center;
+    margin:0 auto;
+}
+
+.scale_4 {
+    padding: 0px 65px 0px 65px;
+    margin-top: 140px;
+
+    width: 1400px;
+    text-align: center;
+    margin:0 auto;
+}
+
+.scale_3 {
+    padding: 0px 65px 0px 65px;
+    margin-top: 140px;
+
+    width: 1050px;
+    text-align: center;
+    margin:0 auto;
+}
+
+.scale_2 {
+    padding: 0px 65px 0px 65px;
+    margin-top: 140px;
+
+    width: 700px;
+    text-align: center;
+    margin:0 auto;
+}
+
+.scale_1 {
+    padding: 0px 65px 0px 65px;
+    margin-top: 140px;
+
+    width: 350px;
+    text-align: center;
+    margin:0 auto;
+}
+
+/* 이미지 크기 지정 */
+#imgchange{
+    width: 330px;
+    height: 330px;
+    padding: 20px 10px 0px 10px;
+    float: left;
+
+    transform: scale(1);
+   -webkit-transform: scale(1);
+   -moz-transform: scale(1);
+   -ms-transform: scale(1);
+   -o-transform: scale(1);
+   transition: all 0.3s ease-in-out;
+}
+
+/* 이미지에 마우스 올리면 내부 크기 변경 */
+#imgchange:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+/* 'top' 아이콘 */
+#MOVE_TOP_BTN {
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    display: none;
+    z-index: 999;
+}

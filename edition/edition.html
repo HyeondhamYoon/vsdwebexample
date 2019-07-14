@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="kr">
+
+<head>
+    <title>서울여자대학교 36회 졸업전시</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./edition.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700,900&display=swap&subset=korean"
+        rel="stylesheet">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+    <!-- 지도 api -->
+    <script type="text/javascript"
+        src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=hlvnjlgbp0"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // 처음 화면에 모듈(회, 팀, 작) hide
+            $(".modulImg").hide();
+
+            // 처음 화면에 작은모듈(회, 팀, 작) hide
+            $(".minimodulImg").hide();
+
+            // 처음 화면에 영상 가운데정렬 hide
+            $(".video_center").hide();
+
+            // 처음 화면에 상단바 고정될 때 나오는 메뉴 hide
+            $("#hidemenu").hide();
+
+            // 처음 화면 크기 받아와서 정렬 방식 지정
+            var width = $(window).width();
+            var width1 = $(window).width();
+
+            // 화면 크기 작을 때
+            if (width <= 1686) {
+                // 가운데정렬로 변경
+                $(".editionTitle").removeClass("editionTitle").addClass("editionTitle_center");
+
+                $(".modul").removeClass("modul").addClass("modul_center");
+                $(".modulExplain").removeClass("modulExplain").addClass("modulExplain_center");
+                $(".modulExplain_1").removeClass("modulExplain_1").addClass("modulExplain_1_center");
+                $(".modulExplain_2").removeClass("modulExplain_2").addClass("modulExplain_2_center");
+
+                // 크기 작을 때 맨 위에서 페이지 시작 : layout_first_center 되어야 함 (상단고정 X, 가운데정렬 X -> 상단고정 X, 가운데정렬 O)
+                $(".layout_first").addClass("layout_first_center");
+                // 크기 작을 때 중간에서 페이지 시작 : layout_first_change_center 되어야 함 (상단고정 O, 가운데정렬 X -> 상단고정 O, 가운데정렬 O)
+                $(".layout_first_change").addClass("layout_first_change_center");
+
+                $(".poster").removeClass("poster").addClass("poster_center");
+                $(".posterExplain").removeClass("posterExplain").addClass("posterExplain_center");
+
+                $(".video").hide();
+                $(".video_center").show();
+
+                $(".profExplain").removeClass("profExplain").addClass("profExplain_center");
+                $(".profLI").removeClass("profLI").addClass("profLI_center");
+
+                $(".map").removeClass("map").addClass("map_center");
+                $(".mapExplain").removeClass("mapExplain").addClass("mapExplain_center");
+                $(".navermap").removeClass("navermap").addClass("navermap_center");
+
+                $(".domyun").removeClass("domyun").addClass("domyun_center");
+
+                $(".layout_poster").removeClass("layout_poster").addClass("layout_poster_center");
+                $(".layout_prof").removeClass("layout_prof").addClass("layout_prof_center");
+                $(".layout_map").removeClass("layout_map").addClass("layout_map_center");
+                $(".layout_domyun").removeClass("layout_domyun").addClass("layout_domyun_center");
+            }
+            // 화면 크기 클 때
+            else {
+                // 가운데정렬 해제
+                $(".editionTitle").removeClass("editionTitle_center").addClass("editionTitle");
+                $(".modul").removeClass("modul_center").addClass("modul");
+                $(".modulExplain").removeClass("modulExplain_center").addClass("modulExplain");
+                $(".modulExplain_1").removeClass("modulExplain_1_center").addClass("modulExplain_1");
+                $(".modulExplain_2").removeClass("modulExplain_2_center").addClass("modulExplain_2");
+
+                // 크기 클 때 맨 위에서 페이지 시작 : layaout_first 되어야 함 (상단고정 X, 가운데정렬 O -> 상단고정 X, 가운데정렬 X)
+                $(".layout_first_center").removeClass("layout_first_center").addClass("layout_first");
+                // 크기 클 때 중간에서 페이지 시작 : layout_first_change 되어야 함 (상단고정 O, 가운데정렬 O -> 상단고정 O, 가운데정렬 X)
+                $(".layout_first_change_center").removeClass("layout_first_change_center").addClass("layout_first_change");
+
+                $(".modulExplain_2_center").removeClass("modulExplain_2_center").addClass("modulExplain_2");
+
+                $(".poster_center").removeClass("poster_center").addClass("poster");
+                $(".posterExplain_center").removeClass("posterExplain_center").addClass("posterExplain");
+
+                $(".video_center").hide();
+                $(".video").show();
+
+                $(".profExplain_center").removeClass("profExplain_center").addClass("profExplain");
+                $(".profLI_center").removeClass("profLI_center").addClass("profLI");
+
+                $(".map_center").removeClass("map_center").addClass("map");
+                $(".mapExplain_center").removeClass("mapExplain_center").addClass("mapExplain");
+                $(".navermap_center").removeClass("navermap_center").addClass("navermap");
+
+                $(".domyun_center").removeClass("domyun_center").addClass("domyun");
+
+                $(".layout_poster_center").removeClass("layout_poster_center").addClass("layout_poster");
+                $(".layout_prof_center").removeClass("layout_prof_center").addClass("layout_prof");
+                $(".layout_map_center").removeClass("layout_map_center").addClass("layout_map");
+                $(".layout_domyun_center").removeClass("layout_domyun_center").addClass("layout_domyun");
+            }
+
+
+            // 메인로고(36) 클릭 시 모듈(회, 팀, 작) fadeIn 4초
+            $("#mainlogo36").click(function () {
+                $(".modulImg").fadeIn('4000');
+                $("#mainlogo36").hide();
+            });
+
+            // hover 모듈 클릭 시 모듈(회, 팀, 작) hide, 메인로고(36) fadeIn 4초
+            $("#modulHover").click(function () {
+                $("#mainlogo36").fadeIn('4000');
+                $(".modulImg").hide();
+            });
+
+            // '각 메뉴 내용' 클릭 시 해당 위치로 이동
+            $("a[href^='#']").click(function (event) {
+                event.preventDefault();
+                var target = $(this.hash);
+                var header_height = $('.area_head').height();
+                var offset_top = target.offset().top - header_height - 150;
+                $('html, body').animate({ scrollTop: offset_top }, 1000);
+            });
+
+            // 상단바 고정
+            var menubar = $('#menubar').offset();
+            var head = document.getElementById('head');
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > menubar.top) {
+
+                    // 로고 hide
+                    $(".logo").hide();
+                    $("#mainlogo36").hide();
+                    $(".modulImg").hide();
+                    $(".minimodulImg").hide();
+
+                    // 작은로고(36) 클릭하면 작은모듈(회, 팀, 작) 보이게
+                    if ($("#logomini").click(function (event) {
+                        $(".minimodulImg").fadeIn('500');
+                        $("#logomini").hide();
+                    }));
+
+                    // 작은 hover 모듈 클릭 시 작은모듈(회, 팀, 작) hide, 작은로고(36) fadeIn 4초
+                    if ($("#minimodulHover").click(function () {
+                        $("#logomini").fadeIn('4000');
+                        $(".minimodulImg").hide();
+                    }));
+
+                    // 메뉴바 fadeIn 2초
+                    $('#showmenu').hide();
+                    $('#hidemenu').show();
+
+                    // 'logomini' fadeIn 2초
+                    $('#logomini').fadeIn('2000');
+
+                    // 상단고정
+                    head.style.position = "fixed";
+                    head.style.top = 0;
+
+                    // 마진값 조절
+                    if (width <= 1686) {
+                        // 크기 작을 때 상단바 고정 안되어있을경우 : layout_first_change_center 되어야 함 (상단고정 X, 가운데정렬 O -> 상단고정 O, 가운데정렬 O)
+                        $(".layout_first_center").removeClass("layout_first_center").addClass("layout_first_change_center");
+                    }
+                    if (width1 > 1686) {
+                        // 크기 클 때 상단바 고정 안되어있을경우 : layout_first_change 되어야 함 (상단고정 X, 가운데정렬 X -> 상단고정 O, 가운데정렬 X)
+                        $(".layout_first").removeClass("layout_first").addClass("layout_first_change");
+                    }
+                    $("#hidemenu").addClass("hidemenu_margin");
+                }
+                else {
+                    // 메인로고 fadeIn 4초
+                    $(".logo").show();
+                    $("#mainlogo36").fadeIn('4000');
+                    $(".modulImg").hide();
+
+                    // 'logomini' hide
+                    $('#logomini').hide();
+
+                    // 메뉴바 fadeIn 2초
+                    $('#hidemenu').hide();
+                    $('#showmenu').show();
+
+                    // 상단고정 해제
+                    head.style.position = 'relative';
+
+                    // 마진값 원래대로 되돌리기
+                    if (width <= 1686) {
+                        // 크기 작을 때 상단바 고정되어있을경우 : layout_first_center 되어야 함 (상단고정 O, 가운데정렬 O -> 상단고정 X, 가운데정렬 O)
+                        $(".layout_first_change_center").removeClass("layout_first_change_center").addClass("layout_first_center");
+                    }
+                    if (width1 > 1686) {
+                        // 크기 클 때 상단바 고정되어있을경우 : layout_first 되어야 함 (상단고정 O, 가운데정렬 X -> 상단고정 X, 가운데정렬 X)
+                        $(".layout_first_change").removeClass("layout_first_change").addClass("layout_first");
+                    }
+                    $("#showmenu").removeClass("showmenu_margin");
+                }
+            });
+
+            // (반응형) 화면 줄어들면 가운데정렬로 변경, 마진값 조절
+            $(window).resize(function () {
+                var width = $(window).width();
+                if (width <= 1686) {
+
+                    // 가운데정렬로 변경
+                    $(".editionTitle").removeClass("editionTitle").addClass("editionTitle_center");
+
+                    $(".modul").removeClass("modul").addClass("modul_center");
+                    $(".modulExplain").removeClass("modulExplain").addClass("modulExplain_center");
+                    $(".modulExplain_1").removeClass("modulExplain_1").addClass("modulExplain_1_center");
+                    $(".modulExplain_2").removeClass("modulExplain_2").addClass("modulExplain_2_center");
+
+                    // 크기 작을 때 맨 위에서 페이지 시작 : layout_first_center 되어야 함 (상단고정 X, 가운데정렬 X -> 상단고정 X, 가운데정렬 O)
+                    $(".layout_first").removeClass("layout_first").addClass("layout_first_center");
+                    // 크기 작을 때 중간에서 페이지 시작 : layout_first_change_center 되어야 함 (상단고정 O, 가운데정렬 X -> 상단고정 O, 가운데정렬 O)
+                    $(".layout_first_change").removeClass("layout_first_change").addClass("layout_first_change_center");
+
+                    $(".poster").removeClass("poster").addClass("poster_center");
+                    $(".posterExplain").removeClass("posterExplain").addClass("posterExplain_center");
+
+                    $(".video").hide();
+                    $(".video_center").show();
+
+                    $(".profExplain").removeClass("profExplain").addClass("profExplain_center");
+                    $(".profLI").removeClass("profLI").addClass("profLI_center");
+
+                    $(".map").removeClass("map").addClass("map_center");
+                    $(".mapExplain").removeClass("mapExplain").addClass("mapExplain_center");
+                    $(".navermap").removeClass("navermap").addClass("navermap_center");
+
+                    $(".domyun").removeClass("domyun").addClass("domyun_center");
+
+                    $(".layout_poster").removeClass("layout_poster").addClass("layout_poster_center");
+                    $(".layout_prof").removeClass("layout_prof").addClass("layout_prof_center");
+                    $(".layout_map").removeClass("layout_map").addClass("layout_map_center");
+                    $(".layout_domyun").removeClass("layout_domyun").addClass("layout_domyun_center");
+
+                }
+                else {
+                    // 가운데정렬 해제
+                    $(".editionTitle_center").removeClass("editionTitle_center").addClass("editionTitle");
+
+                    $(".modul_center").removeClass("modul_center").addClass("modul");
+                    $(".modulExplain_center").removeClass("modulExplain_center").addClass("modulExplain");
+                    $(".modulExplain_1_center").removeClass("modulExplain_1_center").addClass("modulExplain_1");
+                    $(".modulExplain_2_center").removeClass("modulExplain_2_center").addClass("modulExplain_2");
+
+                    // 크기 클 때 맨 위에서 페이지 시작 : layaout_first 되어야 함 (상단고정 X, 가운데정렬 O -> 상단고정 X, 가운데정렬 X)
+                    $(".layout_first_center").removeClass("layout_first_center").addClass("layout_first");
+                    // 크기 클 때 중간에서 페이지 시작 : layout_first_change 되어야 함 (상단고정 O, 가운데정렬 O -> 상단고정 O, 가운데정렬 X)
+                    $(".layout_first_change_center").removeClass("layout_first_change_center").addClass("layout_first_change");
+
+                    $(".poster_center").removeClass("poster_center").addClass("poster");
+                    $(".posterExplain_center").removeClass("posterExplain_center").addClass("posterExplain");
+
+                    $(".video_center").hide();
+                    $(".video").show();
+
+                    $(".profExplain_center").removeClass("profExplain_center").addClass("profExplain");
+                    $(".profLI_center").removeClass("profLI_center").addClass("profLI");
+
+                    $(".map_center").removeClass("map_center").addClass("map");
+                    $(".mapExplain_center").removeClass("mapExplain_center").addClass("mapExplain");
+                    $(".navermap_center").removeClass("navermap_center").addClass("navermap");
+
+                    $(".domyun_center").removeClass("domyun_center").addClass("domyun");
+
+                    $(".layout_poster_center").removeClass("layout_poster_center").addClass("layout_poster");
+                    $(".layout_prof_center").removeClass("layout_prof_center").addClass("layout_prof");
+                    $(".layout_map_center").removeClass("layout_map_center").addClass("layout_map");
+                    $(".layout_domyun_center").removeClass("layout_domyun_center").addClass("layout_domyun");
+                }
+            });
+
+            // 스크롤하면 'top' 아이콘 fadeIn/Out 4초
+            $(function () {
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 0) {
+                        $('#MOVE_TOP_BTN').show();
+                    } else {
+                        $('#MOVE_TOP_BTN').hide();
+                    }
+                });
+            });
+
+            //top으로 이동
+            $("#MOVE_TOP_BTN").click(function (event) {
+                $('html, body').animate({ scrollTop: 0 }, 1000);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="head" id="head">
+
+        <!-- 로고 -->
+        <div class="logo">
+            <!-- 메인로고(36) -->
+            <a><img id="mainlogo36" class="mainlogo36" src="../shareimages/logo.png"></a>
+
+            <!-- 모듈(회, 팀, 작) -->
+            <div id="modul">
+                <a href="#"><img id="modulHover" class="modulImg" src="../shareimages/editionhover.png"></a>
+                <a href="../team/team.html"><img class="modulImg" src="../shareimages/team.png"></a>
+                <a href="../work/work.html"><img class="modulImg" src="../shareimages/work.png"></a>
+            </div>
+        </div>
+
+        <!-- 작은모듈(회, 팀, 작) -->
+        <div id="minimodul">
+            <a href="#"><img id="minimodulHover" class="minimodulImg" src="../shareimages/editionhover.png"></a>
+            <a href="../team/team.html"><img class="minimodulImg" src="../shareimages/team.png"></a>
+            <a href="../work/work.html"><img class="minimodulImg" src="../shareimages/work.png"></a>
+        </div>
+
+        <!-- 메뉴바 -->
+        <div class="menubar" id="menubar">
+            <ul id="showmenu" class="menuLink">
+                <li><a class="menuLink" href="#menu1">전시 소개</a></li>
+                <li><a class="menuLink" href="#menu2">포스터</a></li>
+                <li><a class="menuLink" href="#menu3">교수진</a></li>
+                <li><a class="menuLink" href="#menu4">오시는 길</a></li>
+                <li><a class="menuLink" href="#menu5">전시 도면</a></li>
+            </ul>
+            <ul id="hidemenu" class="hidemenuLink">
+                <li><a class="hidemenuLink" href="#menu1">전시 소개</a></li>
+                <li><a class="hidemenuLink" href="#menu2">포스터</a></li>
+                <li><a class="hidemenuLink" href="#menu3">교수진</a></li>
+                <li><a class="hidemenuLink" href="#menu4">오시는 길</a></li>
+                <li><a class="hidemenuLink" href="#menu5">전시 도면</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 전시 소개 -->
+    <div class="layout_first" id="menu1">
+        <div class="editionTitle">전시 소개</div>
+        <img class="modul" src="./images/modul.png">
+        <div class="modulExplain">
+            <div class="modulExplain_1">
+                36회 졸업전시, 8개의 진행팀, 50개의 참여자와 팀, 67개의 작품
+                <br><br>
+                복잡한 것보다 단순한 것이 더욱 효과적일 때가 있다.
+                <br><br>
+                의미만 거창한 타이틀이 아니라 전시 정보 자체를 타이틀로 사용하여 있는 그대로를 드러냈다.<br>
+                직관적인 타이틀은 복잡한 해석을 요구하지 않으며, 각 참여자의 아이덴티티를 살리는 방법이다.<br>
+                이는 타이틀에 기대지 않고 작품에 더 집중하겠다는 참여자들의 포부이기도 하다.
+                <br><br>
+                이로써 의미만 많고 흔한 전시가 아닌, 2019 서울여대 시각디자인 졸업 전시만의 의미를 갖는다.
+            </div>
+            <div class="modulExplain_2">
+                36th graduation exhibition, 8 progression
+                teams, 50 participants and teams, 67 works
+                <br><br>
+                Sometimes being simple is more effective than
+                being complicated.
+                <br><br>
+                It revealed itself as it is, using the wartime
+                information itself as a title, not just a grandiose
+                title.<br>
+                Intuitive titles do not require complex
+                interpretations, and are a way to save the
+                identity of each participant.<br>
+                This is also the aspiration of participants to
+                focus more on their work rather than relying
+                on the title.
+                <br><br>
+                This is not just a meaningful and common
+                exhibition, but a graduation exhibition of 2019
+                Seoul Women’s University’s visual design.
+            </div>
+        </div>
+    </div>
+
+    <!-- 포스터 -->
+    <div class="layout_poster" id="menu2">
+        <div class="editionTitle">포스터</div>
+        <img class="poster" src="./images/prasol.jpg">
+        <img class="poster" src="./images/pvc.jpg">
+
+        <!-- 영상 가운데정렬 -->
+        <div class="video_center">
+            <iframe src="https://player.vimeo.com/video/344136733?title=0&amp;byline=0&amp;portrait=0" width="640"
+                height="360" frameborder="0"></iframe>
+        </div>
+
+        <div class="posterExplain">
+            <div class="posterExplain_1">
+                [36.8.50.67]은 36회, 8개의 졸준위 팀, 50개의
+                개인과 팀플, 67개의 작업 수를 의미한다.<br>
+                우리는 남다른 한학기의 졸전의 끝인 ‘여름’이라는
+                계절을 매력적으로 느껴 여름에 맞춰 시원함을 느낄
+                수 있는 파라솔과 투명한 pvc를 이용해 실크스크린으로
+                숫자를, 우리의 졸전을 여름에 녹인다는 의미를
+                담아내고자 했다.
+            </div>
+            <div class="posterExplain_2">
+                [36.8.50.67] is 36 times, eight personal team,
+                the 50 individuals and 67 shall mean the number
+                of work.<br>
+                We are extraordinary, the end of the end of the
+                semester ‘summer’ feel glamorous, summer can
+                feel cool to the season that an umbrella and
+                transparent pvc.<br>
+                Silk screen means summer in numbers, our
+                team wanted to make sure I found it.
+            </div>
+        </div>
+    </div>
+    <!-- 영상 -->
+    <div class="video">
+        <iframe src="https://player.vimeo.com/video/344136733?title=0&amp;byline=0&amp;portrait=0" width="640"
+            height="360" frameborder="0"></iframe>
+    </div>
+
+    <!-- 교수진 -->
+    <div class="layout_prof" id="menu3">
+        <div class="editionTitle">교수진</div>
+        <div class="profExplain">
+            <ul class="prof">
+                <li class="profLI">
+                    <div class="profname">한재준</div><br>BX 아이덴티티, 한글디자인
+                </li>
+                <li class="profLI">
+                    <div class="profname">민병걸</div><br>출판디자인, 타이포그래피
+                </li>
+                <li class="profLI">
+                    <div class="profname">이재원</div><br>인포그래픽, 그래픽디자인
+                </li>
+                <li class="profLI">
+                    <div class="profname">유영재</div><br>인터랙티브 영상, 모션디자인,<br>UX/UI
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 오시는 길 -->
+    <div class="layout_map" id="menu4">
+        <div class="editionTitle">오시는 길</div>
+
+        <!-- 네이버지도 -->
+        <script>
+            var map = new naver.maps.Map('navermap', {
+                center: new naver.maps.LatLng(37.629073, 127.091755),
+                zoom: 12
+            });
+
+            var marker = new naver.maps.Marker({
+                position: new naver.maps.LatLng(37.629073, 127.091755),
+                map: map
+            });
+        </script>
+        <div id="navermap" class="navermap"></div>
+        <img class="map" src="./images/map.jpg">
+        <div class="mapExplain">
+            <div class="mapExplain_1">
+                학교버스&nbsp;&nbsp;&nbsp;|<br><br>
+                지하철&nbsp;&nbsp;&nbsp;|<br><br><br><br>
+                시내버스&nbsp;&nbsp;&nbsp;|<br><br><br><br>
+                주소&nbsp;&nbsp;&nbsp;|
+            </div>
+            <div class="mapExplain_2">
+                7호선 태릉입구역, 6호선 화랑대, 석계역에서 셔틀버스 운행
+                <br><br>
+                <span style="color:#FC4C00">1,6호선</span> 석계역 4번 출구에서 시내버스 이용<br>
+                <span style="color:#FC4C00">6,7호선</span> 태릉입구역 7번 출구에서 학교버스 및 시내버스 이용<br>
+                <span style="color:#FC4C00">6호선</span> 화랑대역 3번 출구에서 하차하여 도보 15분 소요
+                <br><br>
+                태릉입구역 및 화랑대역에서<br><span style="color:#FC4C00">202번, 1225번, 1155번, 1156번, 82A, 82B번</span> 탑승 후<br>
+                서울여대 육군사관학교 또는 후문에서 하차
+
+                <br><br>
+                서울특별시 노원구 화랑로 621<br>
+                서울여자대학교 조형예술관<br>
+                1층 바롬갤러리 / 3층 301호
+            </div>
+        </div>
+    </div>
+
+    <!-- 전시 도면 -->
+    <div class="layout_domyun" id="menu5">
+        <div class="editionTitle">전시 도면</div>
+        <img class="domyun" src="./images/domyun.png">
+    </div>
+
+
+    <!-- 작은로고 아이콘 -->
+    <a id="logomini"><img src="../shareimages/logomini.png" width="30px !important"></a>
+    <!-- top으로 이동 -->
+    <a id="MOVE_TOP_BTN"><img src="../shareimages/top.svg" width="50px !important"></a>
+
+</body>
+
+</html>
