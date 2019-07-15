@@ -157,15 +157,15 @@
 .layout_first_center {
     text-align: center;
     margin-top: 120px;
-    margin-left: 80px;
-    margin-right: 80px;
+    /* margin-left: 80px; */
+    /* margin-right: 80px; */
     margin-bottom: 150px;
 }
 .layout_first_center_change {
     text-align: center;
     margin-top: 290px;
-    margin-left: 80px;
-    margin-right: 80px;
+    /* margin-left: 80px;
+    margin-right: 80px; */
     margin-bottom: 150px;
 }
 
@@ -214,7 +214,8 @@
 .layout_map_center {
     text-align: center;
     margin-top: 150px;
-    margin-bottom: 730px;
+    /* margin-bottom: 730px; */
+    margin-bottom: 831px;
 }
 
 /* 전시도면 레이아웃 */
@@ -266,7 +267,8 @@
 
 /* 모듈 이미지 가운데정렬 */
 .modul_center {
-    width: 400px;
+    /* width: 400px; */
+    width: 500px;
     float: center;
 }
 
@@ -300,13 +302,15 @@
     color: #000;
     display: block;
     margin-top: 40px;
-    font-size: 100%;
+    /* font-size: 100%; */
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: -0.2417px;
     font-family: 'Noto Sans KR', sans-serif;
     text-align: left;
     padding-inline-start:0px;
-    width: 421px;
+    /* width: 421px; */
+    width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -327,7 +331,8 @@
 
 /* 포스터 가운데정렬 */
 .poster_center {
-    width: 200px;
+    /* width: 200px; */
+    width: 290px;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -360,8 +365,10 @@
 .video_center embed {
     top: 0;
     left: 0;
-    width: 424px;
-    height: 238.5px;
+    /* width: 424px;
+    height: 238.5px; */
+    width: 600px;
+    height: 337.5px;
 }
 
 /* 포스터 설명 */
@@ -369,7 +376,8 @@
     float: right;
     color: #000;
     display: block;
-    font-size: 100%;
+    /* font-size: 100%; */
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: -0.2417px;
     font-family: 'Noto Sans KR', sans-serif;
@@ -386,14 +394,16 @@
 .posterExplain_center {
     color: #000;
     display: block;
-    font-size: 100%;
+    /* font-size: 100%; */
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: -0.2417px;
     font-family: 'Noto Sans KR', sans-serif;
     text-align: left;
     padding-inline-start:0px;
     line-height: 23px;
-    width: 421px;
+    /* width: 421px; */
+    width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -418,7 +428,8 @@
 .profExplain_center {
     color: #000;
     display: block;
-    font-size: 100%;
+    /* font-size: 100%; */
+    font-size: 20px;
     font-weight: 500;
     letter-spacing: -0.2417px;
     font-family: 'Noto Sans KR', sans-serif;
@@ -427,7 +438,8 @@
     line-height: 23px;
     margin-left: auto;
     margin-right: auto;
-    width: 460px;
+    /* width: 460px; */
+    width: 646px;
 }
 
 .prof {
@@ -444,7 +456,8 @@
 }
 
 .profLI_center {
-    width:230px;
+    /* width:230px; */
+    width:317px;
     margin-bottom: 40px;
     float:left;
 }
@@ -462,7 +475,8 @@
 
 /* 지도 가운데정렬 */
 .map_center {
-    width: 200px;
+    /* width: 200px; */
+    width: 290px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 40px;
@@ -494,7 +508,8 @@
     margin-right:20px;
     font-weight: 900;
     text-align: right;
-    width: 80px;
+    /* width: 80px; */
+    width: 100px;
 }
 
 .mapExplain_2 {
@@ -508,7 +523,7 @@
     float:left;
     font-weight: 500;
     text-align: left;
-    width: 390px;
+    width: 440px;
 }
 
 /* 지도 설명 가운데정렬 */
@@ -516,12 +531,14 @@
     color: #000;
     display: block;
     margin-top: 40px;
-    font-size: 100%;
+    /* font-size: 100%; */
+    font-size: 18px;
     letter-spacing: -0.2417px;
     font-family: 'Noto Sans KR', sans-serif;
     padding-inline-start:0px;
     line-height: 23px;
-    width: 490px;
+    /* width: 490px; */
+    width: 565px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -537,8 +554,10 @@
 
 /* 네이버지도 가운데정렬 */
 .navermap_center {
-    width: 200px;
-    height: 200px;
+    /* width: 200px;
+    height: 200px; */
+    width: 290px;
+    height: 290px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 40px;
@@ -548,7 +567,8 @@
 
 /* 가운데정렬일 때 지도랑 네이버지도 강제정렬해주는 클래스 */
 .mapimglayout_center {
-    width: 442px;
+    /* width: 442px; */
+    width: 620px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -560,7 +580,8 @@
 
 /* 도면 가운데정렬 */
 .domyun_center {
-    width: 500px;
+    /* width: 500px; */
+    width: 688px;
 }
 
 /* 'top' 아이콘 */
