@@ -531,7 +531,7 @@
     width: 500px;
     height: 500px;
     margin-right: 20px;
-    position: static !important;
+    position: relative !important;
     float: left;
 }
 
@@ -542,7 +542,7 @@
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 40px;
-    position: static !important;
+    position: relative !important;
     float: left;
 }
 
