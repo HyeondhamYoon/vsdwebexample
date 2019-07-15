@@ -38,6 +38,63 @@ html {
     height: 100%;
 }
 
+/* 영상 비율 16:9 아닌 작품들 따로 지정해줌 */
+/* 60번 */
+.video_60 {
+    position: relative;
+    padding-bottom: 100%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 4%;
+}
+
+.video_60 iframe,
+.video_60 object,
+.video_60 embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* 65번 */
+.video_65 {
+    position: relative;
+    padding-bottom: 70%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 4%;
+}
+
+.video_65 iframe,
+.video_65 object,
+.video_65 embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 67번 */
+.video_67 {
+    position: relative;
+    padding-bottom: 69%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 4%;
+}
+
+.video_67 iframe,
+.video_67 object,
+.video_67 embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 /* 맨 마지막 이미지 마진값 변경해줌 */
 .image img:nth-last-child(1) {
     margin-bottom: 7%;
