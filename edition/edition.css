@@ -1,3 +1,7 @@
+* {
+    cursor:url(http://drive.google.com/uc?export=view&id=19raHS7zA_x8JbwTvwT61_W4f3CrPVc-D), progress;
+}
+
 .head{
     width: 100%; 
     background-color: #fff;
@@ -149,6 +153,22 @@
     margin-bottom: 1006px;
 }
 
+/* 자바스크립트에서 조건문 여러 개 인식 못해서 따로 만들어줌 */
+.layout_first_center {
+    text-align: center;
+    margin-top: 120px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 150px;
+}
+.layout_first_center_change {
+    text-align: center;
+    margin-top: 290px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 150px;
+}
+
 /* 포스터 레이아웃 */
 .layout_poster {
     text-align: center;
@@ -194,7 +214,7 @@
 .layout_map_center {
     text-align: center;
     margin-top: 150px;
-    margin-bottom: 486px;
+    margin-bottom: 730px;
 }
 
 /* 전시도면 레이아웃 */
@@ -301,8 +321,8 @@
 /* 포스터 */
 .poster {
     width: 500px;
-    margin-right: 20px;
     float: left;
+    margin-right: 20px;
 }
 
 /* 포스터 가운데정렬 */
@@ -330,6 +350,8 @@
 
 /* 영상 가운데정렬 */
 .video_center {
+    margin-top: 9px;
+    margin-bottom: 40px;
     overflow: hidden;
 }
 
@@ -338,8 +360,8 @@
 .video_center embed {
     top: 0;
     left: 0;
-    width: 420px;
-    height: 280px;
+    width: 424px;
+    height: 238.5px;
 }
 
 /* 포스터 설명 */
@@ -443,6 +465,8 @@
     width: 200px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 40px;
+    float: left;
 }
 
 /* 지도 설명 */
@@ -464,7 +488,23 @@
     text-align: right;
     width: 80px;
 }
+
+.mapExplain_1_center {
+    float:left;
+    margin-right:20px;
+    font-weight: 900;
+    text-align: right;
+    width: 80px;
+}
+
 .mapExplain_2 {
+    float:left;
+    font-weight: 500;
+    text-align: left;
+    width: 260px;
+}
+
+.mapExplain_2_center {
     float:left;
     font-weight: 500;
     text-align: left;
@@ -490,6 +530,7 @@
 .navermap {
     width: 500px;
     height: 500px;
+    margin-right: 20px;
     position: static !important;
     float: left;
 }
@@ -500,8 +541,16 @@
     height: 200px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 40px;
     position: static !important;
     float: left;
+}
+
+/* 가운데정렬일 때 지도랑 네이버지도 강제정렬해주는 클래스 */
+.mapimglayout_center {
+    width: 442px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* 도면 */

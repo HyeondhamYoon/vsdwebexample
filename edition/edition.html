@@ -37,7 +37,18 @@
             var width1 = $(window).width();
 
             // 화면 크기 작을 때
-            if (width <= 1686) {
+            if (width <= 1576) {
+
+                // 전시소개 가운데 정렬 버젼 보이게 함
+                $(".layout_first_center").show();
+                $(".layout_first").hide();
+
+                // 지도소개글 가운데 정렬 버젼 보이게 함
+                $(".mapExplain_1_center").show();
+                $(".mapExplain_1").hide();
+                $(".mapExplain_2_center").show();
+                $(".mapExplain_2").hide();
+
                 // 가운데정렬로 변경
                 $(".editionTitle").removeClass("editionTitle").addClass("editionTitle_center");
 
@@ -59,6 +70,8 @@
                 $(".mapExplain").removeClass("mapExplain").addClass("mapExplain_center");
                 $(".navermap").removeClass("navermap").addClass("navermap_center");
 
+                $(".mapimglayout").removeClass("mapimglayout").addClass("mapimglayout_center");
+
                 $(".domyun").removeClass("domyun").addClass("domyun_center");
 
                 $(".layout_poster").removeClass("layout_poster").addClass("layout_poster_center");
@@ -68,6 +81,17 @@
             }
             // 화면 크기 클 때
             else {
+
+                // 전시소개 왼쪽 정렬 버젼 보이게 함
+                $(".layout_first").show();
+                $(".layout_first_center").hide();
+
+                // 지도소개글 왼쪽 정렬 버젼 보이게 함
+                $(".mapExplain_1").show();
+                $(".mapExplain_1_center").hide();
+                $(".mapExplain_2").show();
+                $(".mapExplain_2_center").hide();
+
                 // 가운데정렬 해제
                 $(".editionTitle").removeClass("editionTitle_center").addClass("editionTitle");
                 $(".modul").removeClass("modul_center").addClass("modul");
@@ -89,6 +113,8 @@
                 $(".map_center").removeClass("map_center").addClass("map");
                 $(".mapExplain_center").removeClass("mapExplain_center").addClass("mapExplain");
                 $(".navermap_center").removeClass("navermap_center").addClass("navermap");
+
+                $(".mapimglayout_center").removeClass("mapimglayout_center").addClass("mapimglayout");
 
                 $(".domyun_center").removeClass("domyun_center").addClass("domyun");
 
@@ -157,7 +183,8 @@
 
                     // 마진값 조절
                     $(".layout_first").removeClass("layout_first").addClass("layout_first_change");
-                    
+                    $(".layout_first_center").removeClass("layout_first_center").addClass("layout_first_center_change");
+
                     $("#hidemenu").addClass("hidemenu_margin");
                 }
                 else {
@@ -178,6 +205,8 @@
 
                     // 마진값 원래대로 되돌리기
                     $(".layout_first_change").removeClass("layout_first_change").addClass("layout_first");
+                    $(".layout_first_center_change").removeClass("layout_first_center_change").addClass("layout_first_center");
+
                     $("#showmenu").removeClass("showmenu_margin");
                 }
             });
@@ -185,7 +214,19 @@
             // (반응형) 화면 줄어들면 가운데정렬로 변경, 마진값 조절
             $(window).resize(function () {
                 var width = $(window).width();
-                if (width <= 1686) {
+                if (width <= 1576) {
+
+                    // 전시소개 가운데 정렬 버젼 보이게 함
+                    $(".layout_first_center").show();
+                    $(".layout_first").hide();
+                    $(".layout_first_center_change").show();
+                    $(".layout_first_change").hide();
+
+                    // 지도소개글 가운데 정렬 버젼 보이게 함
+                    $(".mapExplain_1_center").show();
+                    $(".mapExplain_1").hide();
+                    $(".mapExplain_2_center").show();
+                    $(".mapExplain_2").hide();
 
                     // 가운데정렬로 변경
                     $(".editionTitle").removeClass("editionTitle").addClass("editionTitle_center");
@@ -208,6 +249,8 @@
                     $(".mapExplain").removeClass("mapExplain").addClass("mapExplain_center");
                     $(".navermap").removeClass("navermap").addClass("navermap_center");
 
+                    $(".mapimglayout").removeClass("mapimglayout").addClass("mapimglayout_center");
+
                     $(".domyun").removeClass("domyun").addClass("domyun_center");
 
                     $(".layout_poster").removeClass("layout_poster").addClass("layout_poster_center");
@@ -217,6 +260,19 @@
 
                 }
                 else {
+
+                    // 전시소개 왼쪽 정렬 버젼 보이게 함
+                    $(".layout_first").show();
+                    $(".layout_first_center").hide();
+                    $(".layout_first_change").show();
+                    $(".layout_first_center_change").hide();
+
+                    // 지도소개글 왼쪽 정렬 버젼 보이게 함
+                    $(".mapExplain_1").show();
+                    $(".mapExplain_1_center").hide();
+                    $(".mapExplain_2").show();
+                    $(".mapExplain_2_center").hide();
+
                     // 가운데정렬 해제
                     $(".editionTitle_center").removeClass("editionTitle_center").addClass("editionTitle");
 
@@ -237,6 +293,8 @@
                     $(".map_center").removeClass("map_center").addClass("map");
                     $(".mapExplain_center").removeClass("mapExplain_center").addClass("mapExplain");
                     $(".navermap_center").removeClass("navermap_center").addClass("navermap");
+
+                    $(".mapimglayout_center").removeClass("mapimglayout_center").addClass("mapimglayout");
 
                     $(".domyun_center").removeClass("domyun_center").addClass("domyun");
 
@@ -349,6 +407,47 @@
         </div>
     </div>
 
+    <!-- 자바스크립트에서 조건문 여러 개 인식 못해서 따로 만들어줌 -->
+    <!-- 전시 소개 가운데정렬-->
+    <div class="layout_first_center" id="menu1">
+        <div class="editionTitle">전시 소개</div>
+        <img class="modul" src="./images/modul.png">
+        <div class="modulExplain">
+            <div class="modulExplain_1">
+                36회 졸업전시, 8개의 진행팀, 50개의 참여자와 팀, 67개의 작품
+                <br><br>
+                복잡한 것보다 단순한 것이 더욱 효과적일 때가 있다.
+                <br><br>
+                의미만 거창한 타이틀이 아니라 전시 정보 자체를 타이틀로 사용하여 있는 그대로를 드러냈다.<br>
+                직관적인 타이틀은 복잡한 해석을 요구하지 않으며, 각 참여자의 아이덴티티를 살리는 방법이다.<br>
+                이는 타이틀에 기대지 않고 작품에 더 집중하겠다는 참여자들의 포부이기도 하다.
+                <br><br>
+                이로써 의미만 많고 흔한 전시가 아닌, 2019 서울여대 시각디자인 졸업 전시만의 의미를 갖는다.
+            </div>
+            <div class="modulExplain_2">
+                36th graduation exhibition, 8 progression
+                teams, 50 participants and teams, 67 works
+                <br><br>
+                Sometimes being simple is more effective than
+                being complicated.
+                <br><br>
+                It revealed itself as it is, using the wartime
+                information itself as a title, not just a grandiose
+                title.<br>
+                Intuitive titles do not require complex
+                interpretations, and are a way to save the
+                identity of each participant.<br>
+                This is also the aspiration of participants to
+                focus more on their work rather than relying
+                on the title.
+                <br><br>
+                This is not just a meaningful and common
+                exhibition, but a graduation exhibition of 2019
+                Seoul Women’s University’s visual design.
+            </div>
+        </div>
+    </div>
+
     <!-- 포스터 -->
     <div class="layout_poster" id="menu2">
         <div class="editionTitle">포스터</div>
@@ -415,24 +514,27 @@
     <div class="layout_map" id="menu4">
         <div class="editionTitle">오시는 길</div>
 
-        <!-- 네이버지도 -->
-        <script>
-            var map = new naver.maps.Map('navermap', {
-                center: new naver.maps.LatLng(37.629073, 127.091755),
-                zoom: 12
-            });
+        <div class="mapimglayout">
+            <!-- 네이버지도 -->
+            <div id="navermap" class="navermap"></div>
+            <script>
+                var map = new naver.maps.Map('navermap', {
+                    center: new naver.maps.LatLng(37.629073, 127.091755),
+                    zoom: 13
+                });
 
-            var marker = new naver.maps.Marker({
-                position: new naver.maps.LatLng(37.629073, 127.091755),
-                map: map
-            });
-        </script>
-        <div id="navermap" class="navermap"></div>
-        <img class="map" src="./images/map.jpg">
+                var marker = new naver.maps.Marker({
+                    position: new naver.maps.LatLng(37.629073, 127.091755),
+                    map: map
+                });
+            </script>
+
+            <img class="map" src="./images/map.jpg">
+        </div>
         <div class="mapExplain">
             <div class="mapExplain_1">
-                학교버스&nbsp;&nbsp;&nbsp;|<br><br>
-                지하철&nbsp;&nbsp;&nbsp;|<br><br><br><br>
+                학교버스&nbsp;&nbsp;&nbsp;|<br><br><br>
+                지하철&nbsp;&nbsp;&nbsp;|<br><br><br><br><br><br><br>
                 시내버스&nbsp;&nbsp;&nbsp;|<br><br><br><br>
                 주소&nbsp;&nbsp;&nbsp;|
             </div>
@@ -443,8 +545,30 @@
                 <span style="color:#FC4C00">6,7호선</span> 태릉입구역 7번 출구에서 학교버스 및 시내버스 이용<br>
                 <span style="color:#FC4C00">6호선</span> 화랑대역 3번 출구에서 하차하여 도보 15분 소요
                 <br><br>
-                태릉입구역 및 화랑대역에서<br><span style="color:#FC4C00">202번, 1225번, 1155번, 1156번, 82A, 82B번</span> 탑승 후<br>
-                서울여대 육군사관학교 또는 후문에서 하차
+                태릉입구역 및 화랑대역에서<br><span style="color:#FC4C00">202번, 1155번, 1156번, 82A, 82B번</span> 탑승 후
+                서울여대 정문 또는 후문 하차
+
+                <br><br>
+                서울특별시 노원구 화랑로 621<br>
+                서울여자대학교 조형예술관<br>
+                1층 바롬갤러리 / 3층 301호
+            </div>
+            <!-- 중앙 정렬 시 레이아웃 변경되므로 따로 만들어줌 -->
+            <div class="mapExplain_1_center">
+                학교버스&nbsp;&nbsp;&nbsp;|<br><br>
+                지하철&nbsp;&nbsp;&nbsp;|<br><br><br><br>
+                시내버스&nbsp;&nbsp;&nbsp;|<br><br><br><br>
+                주소&nbsp;&nbsp;&nbsp;|
+            </div>
+            <div class="mapExplain_2_center">
+                7호선 태릉입구역, 6호선 화랑대, 석계역에서 셔틀버스 운행
+                <br><br>
+                <span style="color:#FC4C00">1,6호선</span> 석계역 4번 출구에서 시내버스 이용<br>
+                <span style="color:#FC4C00">6,7호선</span> 태릉입구역 7번 출구에서 학교버스 및 시내버스 이용<br>
+                <span style="color:#FC4C00">6호선</span> 화랑대역 3번 출구에서 하차하여 도보 15분 소요
+                <br><br>
+                태릉입구역 및 화랑대역에서<br><span style="color:#FC4C00">202번, 1155번, 1156번, 82A, 82B번</span> 탑승 후
+                서울여대 정문 또는 후문 하차
 
                 <br><br>
                 서울특별시 노원구 화랑로 621<br>
