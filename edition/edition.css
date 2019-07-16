@@ -214,8 +214,7 @@
 .layout_map_center {
     text-align: center;
     margin-top: 150px;
-    /* margin-bottom: 730px; */
-    margin-bottom: 831px;
+    margin-bottom: 150px;
 }
 
 /* 전시도면 레이아웃 */
@@ -302,24 +301,13 @@
     color: #000;
     display: block;
     margin-top: 40px;
-    /* font-size: 100%; */
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: -0.2417px;
-    font-family: 'Noto Sans KR', sans-serif;
-    text-align: left;
     padding-inline-start:0px;
-    /* width: 421px; */
     width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
 .modulExplain_1_center {
-    line-height: 23px;
     margin-bottom: 40px;
-}
-.modulExplain_2_center {
-    line-height: 23px;
 }
 
 /* 포스터 */
@@ -392,17 +380,7 @@
 
 /* 포스터 설명 가운데정렬 */
 .posterExplain_center {
-    color: #000;
-    display: block;
-    /* font-size: 100%; */
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: -0.2417px;
-    font-family: 'Noto Sans KR', sans-serif;
-    text-align: left;
     padding-inline-start:0px;
-    line-height: 23px;
-    /* width: 421px; */
     width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -426,20 +404,10 @@
 
 /* 교수진 설명 가운데정렬 */
 .profExplain_center {
-    color: #000;
-    display: block;
-    /* font-size: 100%; */
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: -0.2417px;
-    font-family: 'Noto Sans KR', sans-serif;
-    text-align: center;
     padding-inline-start:0px;
-    line-height: 23px;
     margin-left: auto;
     margin-right: auto;
-    /* width: 460px; */
-    width: 646px;
+    width: 640px;
 }
 
 .prof {
@@ -509,7 +477,6 @@
     font-weight: 900;
     text-align: right;
     /* width: 80px; */
-    width: 100px;
 }
 
 .mapExplain_2 {
@@ -523,24 +490,46 @@
     float:left;
     font-weight: 500;
     text-align: left;
-    width: 440px;
 }
 
 /* 지도 설명 가운데정렬 */
 .mapExplain_center {
-    color: #000;
-    display: block;
     margin-top: 40px;
-    /* font-size: 100%; */
-    font-size: 18px;
-    letter-spacing: -0.2417px;
-    font-family: 'Noto Sans KR', sans-serif;
     padding-inline-start:0px;
-    line-height: 23px;
-    /* width: 490px; */
-    width: 565px;
+    width: 640px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.maptexttitle li{
+    list-style-type: none;
+}
+
+.schoolbustitle {
+    margin-bottom: 20px !important;
+}
+
+.subwaytitle {
+    margin-bottom: 67px !important;
+}
+
+.bustitle {
+    margin-bottom: 20px !important;
+}
+
+.addresstitle {
+    margin-bottom: 63px !important;
+}
+
+.maptext {
+    font-size: 100%;
+    padding-inline-start: 0px !important;
+}
+
+.maptext li {
+    margin-bottom: 20px !important;
+    padding-inline-start: 0px !important;
+    list-style-type: none;
 }
 
 /* 네이버 지도 */
@@ -581,7 +570,7 @@
 /* 도면 가운데정렬 */
 .domyun_center {
     /* width: 500px; */
-    width: 688px;
+    width: 729px;
 }
 
 /* 'top' 아이콘 */

@@ -63,7 +63,9 @@
                 $(".video").hide();
                 $(".video_center").show();
 
-                $(".profExplain").removeClass("profExplain").addClass("profExplain_center");
+                $(".profExplain").hide();
+                $(".profExplain_center").show();
+
                 $(".profLI").removeClass("profLI").addClass("profLI_center");
 
                 $(".map").removeClass("map").addClass("map_center");
@@ -107,7 +109,9 @@
                 $(".video_center").hide();
                 $(".video").show();
 
-                $(".profExplain_center").removeClass("profExplain_center").addClass("profExplain");
+                $(".profExplain_center").hide();
+                $(".profExplain").show();
+
                 $(".profLI_center").removeClass("profLI_center").addClass("profLI");
 
                 $(".map_center").removeClass("map_center").addClass("map");
@@ -242,7 +246,9 @@
                     $(".video").hide();
                     $(".video_center").show();
 
-                    $(".profExplain").removeClass("profExplain").addClass("profExplain_center");
+                    $(".profExplain").hide();
+                    $(".profExplain_center").show();
+
                     $(".profLI").removeClass("profLI").addClass("profLI_center");
 
                     $(".map").removeClass("map").addClass("map_center");
@@ -287,7 +293,9 @@
                     $(".video_center").hide();
                     $(".video").show();
 
-                    $(".profExplain_center").removeClass("profExplain_center").addClass("profExplain");
+                    $(".profExplain_center").hide();
+                    $(".profExplain").show();
+
                     $(".profLI_center").removeClass("profLI_center").addClass("profLI");
 
                     $(".map_center").removeClass("map_center").addClass("map");
@@ -318,6 +326,11 @@
 
             //top으로 이동
             $("#MOVE_TOP_BTN").click(function (event) {
+                $('html, body').animate({ scrollTop: 0 }, 1000);
+            });
+
+            //top으로 이동
+            $("#toptop").click(function (event) {
                 $('html, body').animate({ scrollTop: 0 }, 1000);
             });
         });
@@ -409,41 +422,15 @@
 
     <!-- 자바스크립트에서 조건문 여러 개 인식 못해서 따로 만들어줌 -->
     <!-- 전시 소개 가운데정렬-->
-    <div class="layout_first_center" id="menu1">
+    <div class="layout_first_center" id="toptop">
         <div class="editionTitle">전시 소개</div>
         <img class="modul" src="./images/modul.png">
         <div class="modulExplain">
             <div class="modulExplain_1">
-                36회 졸업전시, 8개의 진행팀, 50개의 참여자와 팀, 67개의 작품
-                <br><br>
-                복잡한 것보다 단순한 것이 더욱 효과적일 때가 있다.
-                <br><br>
-                의미만 거창한 타이틀이 아니라 전시 정보 자체를 타이틀로 사용하여 있는 그대로를 드러냈다.<br>
-                직관적인 타이틀은 복잡한 해석을 요구하지 않으며, 각 참여자의 아이덴티티를 살리는 방법이다.<br>
-                이는 타이틀에 기대지 않고 작품에 더 집중하겠다는 참여자들의 포부이기도 하다.
-                <br><br>
-                이로써 의미만 많고 흔한 전시가 아닌, 2019 서울여대 시각디자인 졸업 전시만의 의미를 갖는다.
+                <img src="./images/modulkor.svg">
             </div>
             <div class="modulExplain_2">
-                36th graduation exhibition, 8 progression
-                teams, 50 participants and teams, 67 works
-                <br><br>
-                Sometimes being simple is more effective than
-                being complicated.
-                <br><br>
-                It revealed itself as it is, using the wartime
-                information itself as a title, not just a grandiose
-                title.<br>
-                Intuitive titles do not require complex
-                interpretations, and are a way to save the
-                identity of each participant.<br>
-                This is also the aspiration of participants to
-                focus more on their work rather than relying
-                on the title.
-                <br><br>
-                This is not just a meaningful and common
-                exhibition, but a graduation exhibition of 2019
-                Seoul Women’s University’s visual design.
+                <img src="./images/moduleng.svg">
             </div>
         </div>
     </div>
@@ -462,24 +449,10 @@
 
         <div class="posterExplain">
             <div class="posterExplain_1">
-                [36.8.50.67]은 36회, 8개의 졸준위 팀, 50개의
-                개인과 팀플, 67개의 작업 수를 의미한다.<br>
-                우리는 남다른 한학기의 졸전의 끝인 ‘여름’이라는
-                계절을 매력적으로 느껴 여름에 맞춰 시원함을 느낄
-                수 있는 파라솔과 투명한 pvc를 이용해 실크스크린으로
-                숫자를, 우리의 졸전을 여름에 녹인다는 의미를
-                담아내고자 했다.
+                <img src="./images/posterkor.svg">
             </div>
             <div class="posterExplain_2">
-                [36.8.50.67] is 36 times, eight personal team,
-                the 50 individuals and 67 shall mean the number
-                of work.<br>
-                We are extraordinary, the end of the end of the
-                semester ‘summer’ feel glamorous, summer can
-                feel cool to the season that an umbrella and
-                transparent pvc.<br>
-                Silk screen means summer in numbers, our
-                team wanted to make sure I found it.
+                <img src="./images/postereng.svg">
             </div>
         </div>
     </div>
@@ -507,6 +480,10 @@
                     <div class="profname">유영재</div><br>인터랙티브 영상, 모션디자인,<br>UX/UI
                 </li>
             </ul>
+        </div>
+        <!-- 교수진 가운데정렬 -->
+        <div class="profExplain_center">
+            <img src="./images/prof.svg">
         </div>
     </div>
 
@@ -554,26 +531,8 @@
                 1층 바롬갤러리 / 3층 301호
             </div>
             <!-- 중앙 정렬 시 레이아웃 변경되므로 따로 만들어줌 -->
-            <div class="mapExplain_1_center">
-                학교버스&nbsp;&nbsp;&nbsp;|<br><br>
-                지하철&nbsp;&nbsp;&nbsp;|<br><br><br><br>
-                시내버스&nbsp;&nbsp;&nbsp;|<br><br><br><br>
-                주소&nbsp;&nbsp;&nbsp;|
-            </div>
-            <div class="mapExplain_2_center">
-                7호선 태릉입구역, 6호선 화랑대, 석계역에서 셔틀버스 운행
-                <br><br>
-                <span style="color:#FC4C00">1,6호선</span> 석계역 4번 출구에서 시내버스 이용<br>
-                <span style="color:#FC4C00">6,7호선</span> 태릉입구역 7번 출구에서 학교버스 및 시내버스 이용<br>
-                <span style="color:#FC4C00">6호선</span> 화랑대역 3번 출구에서 하차하여 도보 15분 소요
-                <br><br>
-                태릉입구역 및 화랑대역에서<br><span style="color:#FC4C00">202번, 1155번, 1156번, 82A, 82B번</span> 탑승 후<br>
-                서울여대 정문 또는 후문 하차
-
-                <br><br>
-                서울특별시 노원구 화랑로 621<br>
-                서울여자대학교 조형예술관<br>
-                1층 바롬갤러리 / 3층 301호
+            <div class="mapExplain_center">
+                <img src="./images/map.svg">
             </div>
         </div>
     </div>
